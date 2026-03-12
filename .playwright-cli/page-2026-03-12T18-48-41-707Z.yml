@@ -1,0 +1,307 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - img "ООО Снабжающая Компания" [ref=e5]
+      - navigation "Главное меню" [ref=e6]:
+        - link "Главная" [ref=e7] [cursor=pointer]:
+          - /url: "#home"
+        - link "О компании" [ref=e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "Продукция" [ref=e9] [cursor=pointer]:
+          - /url: "#products"
+        - link "Нам доверяют" [ref=e10] [cursor=pointer]:
+          - /url: "#trust"
+        - link "Заявка" [ref=e11] [cursor=pointer]:
+          - /url: "#request"
+        - link "Контакты" [ref=e12] [cursor=pointer]:
+          - /url: "#contacts"
+  - main [ref=e13]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: ПОСТАВКИ
+        - heading "ЭЛЕКТРОТЕХНИЧЕСКОЙ ПРОДУКЦИИ И ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ" [level=1] [ref=e18]:
+          - generic [ref=e19]: ЭЛЕКТРОТЕХНИЧЕСКОЙ
+          - generic [ref=e20]: ПРОДУКЦИИ
+          - generic [ref=e21]: И ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ
+        - paragraph [ref=e22]: Комплексное снабжение предприятий и участие в тендерных поставках по всей России
+        - generic [ref=e23]:
+          - link "ПОЛУЧИТЬ КП" [ref=e24] [cursor=pointer]:
+            - /url: "#request"
+            - text: ПОЛУЧИТЬ КП
+            - img [ref=e25]
+          - link "КАТАЛОГ ПРОДУКЦИИ" [ref=e27] [cursor=pointer]:
+            - /url: "#products"
+      - img "Поставка электротехнической продукции и промышленного оборудования" [ref=e29]
+    - generic [ref=e30]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "О КОМПАНИИ" [level=2] [ref=e36]
+          - paragraph [ref=e37]: ООО «Снабжающая Компания» обеспечивает предприятия электротехнической продукцией и промышленным оборудованием по всей России.
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: Работаем с промышленными объектами, подрядчиками и снабженческими отделами, подбираем позиции под спецификацию и сопровождаем закупку от запроса до отгрузки.
+            - paragraph [ref=e40]: Помогаем комплектовать заявки, сокращать сроки закупки и подбирать надежные решения под реальные задачи заказчика.
+        - generic [ref=e41]:
+          - article [ref=e42]:
+            - strong [ref=e43]: 10+
+            - heading "лет на рынке" [level=3] [ref=e44]
+            - paragraph [ref=e45]: Комплексное снабжение и тендерные поставки.
+          - article [ref=e46]:
+            - strong [ref=e47]: 500+
+            - heading "успешных проектов" [level=3] [ref=e48]
+            - paragraph [ref=e49]: Поставки для предприятий, строительства и сервиса.
+          - article [ref=e50]:
+            - strong [ref=e51]: 80+
+            - heading "партнеров по РФ" [level=3] [ref=e52]
+            - paragraph [ref=e53]: Работа с поставщиками и логистикой по всей стране.
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "ПРОДУКЦИЯ" [level=2] [ref=e57]
+          - link "Запросить подбор" [ref=e58] [cursor=pointer]:
+            - /url: "#request"
+            - text: Запросить подбор
+            - img [ref=e59]
+        - generic [ref=e61]:
+          - article [ref=e62]:
+            - generic [ref=e63]: "01"
+            - heading "Кабельная продукция" [level=3] [ref=e64]
+            - paragraph [ref=e65]: Силовой, контрольный и монтажный кабель для промышленных задач.
+          - article [ref=e66]:
+            - generic [ref=e67]: "02"
+            - heading "Электрощитовое оборудование" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Шкафы, щиты, комплектующие и решения под проект.
+          - article [ref=e70]:
+            - generic [ref=e71]: "03"
+            - heading "Автоматика и защита" [level=3] [ref=e72]
+            - paragraph [ref=e73]: Автоматы, УЗО, контакторы и оборудование управления.
+          - article [ref=e74]:
+            - generic [ref=e75]: "04"
+            - heading "Трансформаторы" [level=3] [ref=e76]
+            - paragraph [ref=e77]: Силовые и измерительные решения для производственных объектов.
+          - article [ref=e78]:
+            - generic [ref=e79]: "05"
+            - heading "Промышленное оборудование" [level=3] [ref=e80]
+            - paragraph [ref=e81]: Поставка узлов, комплектующих и сопутствующей оснастки.
+          - article [ref=e82]:
+            - generic [ref=e83]: "06"
+            - heading "Светотехника" [level=3] [ref=e84]
+            - paragraph [ref=e85]: Светильники, прожекторы и комплектующие для объектов и складов.
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - heading "НАМ ДОВЕРЯЮТ" [level=2] [ref=e91]
+          - paragraph [ref=e92]: Нам доверяют проектные команды, производственные предприятия, монтажные организации и снабженческие отделы.
+          - list [ref=e93]:
+            - listitem [ref=e94]: Поставки под проект и оперативные закупки
+            - listitem [ref=e95]: Подбор аналогов и комплектование заявок
+            - listitem [ref=e96]: Понятные сроки, документы и сопровождение
+        - generic [ref=e97]:
+          - article [ref=e98]:
+            - generic [ref=e99]: LOGO
+            - paragraph [ref=e100]: Логотип компании
+          - article [ref=e101]:
+            - generic [ref=e102]: LOGO
+            - paragraph [ref=e103]: Логотип компании
+          - article [ref=e104]:
+            - generic [ref=e105]: LOGO
+            - paragraph [ref=e106]: Логотип компании
+          - article [ref=e107]:
+            - generic [ref=e108]: LOGO
+            - paragraph [ref=e109]: Логотип компании
+          - article [ref=e110]:
+            - generic [ref=e111]: LOGO
+            - paragraph [ref=e112]: Логотип компании
+          - article [ref=e113]:
+            - generic [ref=e114]: LOGO
+            - paragraph [ref=e115]: Логотип компании
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - paragraph [ref=e120]: Быстрый запрос
+          - heading "ЗАЯВКА" [level=2] [ref=e121]
+          - paragraph [ref=e122]: Оставьте контакты, и менеджер свяжется с вами для расчета, подбора и уточнения условий поставки.
+          - list [ref=e123]:
+            - listitem [ref=e124]: Подготовка коммерческого предложения
+            - listitem [ref=e125]: Проверка наличия и сроков отгрузки
+            - listitem [ref=e126]: Подбор оборудования под задачу
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: Имя
+            - textbox "Имя" [ref=e130]:
+              - /placeholder: Ваше имя
+          - generic [ref=e131]:
+            - generic [ref=e132]: Телефон
+            - textbox "Телефон" [ref=e133]:
+              - /placeholder: +7 (___) ___-__-__
+          - button "ОТПРАВИТЬ" [ref=e134] [cursor=pointer]:
+            - text: ОТПРАВИТЬ
+            - img [ref=e135]
+      - generic [ref=e139]:
+        - iframe [ref=e142]:
+          - generic [active] [ref=f1e1]:
+            - generic [ref=f1e2]:
+              - generic:
+                - generic:
+                  - generic [ref=f1e6]:
+                    - generic:
+                      - generic:
+                        - img
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic [ref=f1e7]:
+                          - generic [ref=f1e8]:
+                            - button [ref=f1e11] [cursor=pointer]:
+                              - generic:
+                                - generic:
+                                  - img
+                            - button "Пробки" [ref=f1e13] [cursor=pointer]:
+                              - generic [ref=f1e14]:
+                                - generic:
+                                  - img
+                              - generic [ref=f1e16]: Пробки
+                          - iframe [ref=f1e17]:
+                            
+                        - generic [ref=f1e18]:
+                          - generic [ref=f1e21]:
+                            - button "Приблизить" [ref=f1e23] [cursor=pointer]:
+                              - generic:
+                                - generic:
+                                  - img
+                            - button "Отдалить" [ref=f1e25] [cursor=pointer]:
+                              - generic:
+                                - generic:
+                                  - img
+                          - iframe [ref=f1e26]:
+                            
+                        - generic [ref=f1e27]:
+                          - button "Моё местоположение" [ref=f1e30] [cursor=pointer]:
+                            - generic:
+                              - generic:
+                                - img
+                          - iframe [ref=f1e31]:
+                            
+                        - generic [ref=f1e32]:
+                          - button "Открыть в Яндекс Картах" [ref=f1e35] [cursor=pointer]:
+                            - generic:
+                              - generic:
+                                - img
+                            - generic [ref=f1e36]: Открыть в Яндекс Картах
+                          - iframe [ref=f1e37]:
+                            
+                        - generic:
+                          - generic:
+                            - generic:
+                              - button "Открыть в Картах":
+                                - generic:
+                                  - generic:
+                                    - img
+                                - generic: Открыть в Картах
+                          - iframe [ref=f1e38]:
+                            
+                        - generic:
+                          - generic:
+                            - generic:
+                              - button:
+                                - generic:
+                                  - generic:
+                                    - img
+                          - iframe [ref=f1e39]:
+                            
+                      - generic:
+                        - generic:
+                          - contentinfo:
+                            - link "Условия использования" [ref=f1e42] [cursor=pointer]:
+                              - /url: https://yandex.ru/legal/maps_termsofuse/?lang=ru
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic: 50 м
+                      - iframe [ref=f1e43]:
+                        
+                  - iframe [ref=f1e44]:
+                    
+            - generic [ref=f1e49]: Затонская улица, 46с11
+            - dialog "Открылось всплывающее окно" [ref=f1e50]:
+              - generic [ref=f1e51]: Открылось всплывающее окно
+              - generic [ref=f1e54]:
+                - button "Закрыть" [ref=f1e55] [cursor=pointer]:
+                  - img [ref=f1e57]
+                - generic [ref=f1e61]:
+                  - generic [ref=f1e62]:
+                    - generic [ref=f1e64]:
+                      - generic [ref=f1e65]:
+                        - link "Затонская улица, 46с11" [ref=f1e66] [cursor=pointer]:
+                          - /url: https://yandex.ru/maps/62/krasnoyarsk/house/zatonskaya_ulitsa_46s11/bUsYfwRjTUQGQFtvfXV2eXVmZQ==/?from=mapframe
+                        - generic [ref=f1e67]: Красноярск
+                      - button "Организации в доме" [ref=f1e69] [cursor=pointer]:
+                        - generic [ref=f1e70]: Организации в доме
+                      - button "Сообщить об ошибке" [ref=f1e72] [cursor=pointer]:
+                        - generic [ref=f1e73]: Сообщить об ошибке
+                    - iframe [ref=f1e74]:
+                      
+                  - iframe [ref=f1e75]:
+                    
+        - generic [ref=e143]:
+          - heading "Контакты" [level=2] [ref=e145]
+          - generic [ref=e147]:
+            - link "+7 (391) 288-77-08" [ref=e148] [cursor=pointer]:
+              - /url: tel:+73912887708
+            - link "info@snab-comp.ru" [ref=e149] [cursor=pointer]:
+              - /url: mailto:info@snab-comp.ru
+            - paragraph [ref=e150]: "Координаты: 55.978951, 92.933411"
+          - generic [ref=e151]:
+            - paragraph [ref=e152]: Режим работы
+            - list [ref=e153]:
+              - listitem [ref=e154]:
+                - generic [ref=e155]: Понедельник
+                - strong [ref=e156]: 09:00-17:00
+              - listitem [ref=e157]:
+                - generic [ref=e158]: Вторник
+                - strong [ref=e159]: 09:00-17:00
+              - listitem [ref=e160]:
+                - generic [ref=e161]: Среда
+                - strong [ref=e162]: 09:00-17:00
+              - listitem [ref=e163]:
+                - generic [ref=e164]: Четверг
+                - strong [ref=e165]: 09:00-17:00
+              - listitem [ref=e166]:
+                - generic [ref=e167]: Пятница
+                - strong [ref=e168]: 09:00-17:00
+              - listitem [ref=e169]:
+                - generic [ref=e170]: Суббота
+                - strong [ref=e171]: Выходной
+              - listitem [ref=e172]:
+                - generic [ref=e173]: Воскресенье
+                - strong [ref=e174]: Выходной
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: Имя
+              - textbox "Имя" [ref=e178]
+            - generic [ref=e179]:
+              - generic [ref=e180]: Телефон
+              - textbox "Телефон" [ref=e181]:
+                - /placeholder: +7 (___) ___-__-__
+            - generic [ref=e182]:
+              - generic [ref=e183]: Комментарий
+              - textbox "Комментарий" [ref=e184]
+            - button "Отправить" [ref=e185] [cursor=pointer]
+  - contentinfo [ref=e186]:
+    - generic [ref=e187]:
+      - generic [ref=e188]:
+        - img "ООО Снабжающая Компания" [ref=e189]
+        - paragraph [ref=e190]: Поставка электротехнической продукции и промышленного оборудования для предприятий по всей России.
+      - navigation "Меню в подвале" [ref=e191]:
+        - link "О компании" [ref=e192] [cursor=pointer]:
+          - /url: "#about"
+        - link "Продукция" [ref=e193] [cursor=pointer]:
+          - /url: "#products"
+        - link "Нам доверяют" [ref=e194] [cursor=pointer]:
+          - /url: "#trust"
+        - link "Заявка" [ref=e195] [cursor=pointer]:
+          - /url: "#request"
+        - link "Контакты" [ref=e196] [cursor=pointer]:
+          - /url: "#contacts"
+      - generic [ref=e197]:
+        - link "+7 (391) 288-77-08" [ref=e198] [cursor=pointer]:
+          - /url: tel:+73912887708
+        - link "info@snab-comp.ru" [ref=e199] [cursor=pointer]:
+          - /url: mailto:info@snab-comp.ru
+        - generic [ref=e200]: © 2026 ООО «Снабжающая Компания»
