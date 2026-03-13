@@ -3,378 +3,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ООО Снабжающая Компания</title>
+  <title>ООО Снабжающая Компания | Главная</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="Вектор.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="page-home">
   <div class="page-shell">
     <header class="site-header">
       <div class="container header-row">
-      
-        <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
-        
+        <a class="header-brand" href="index.html" aria-label="ООО Снабжающая Компания">
+          <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+        </a>
 
-        <nav class="main-nav" aria-label="Главное меню">
-          <a class="active" href="#home">Главная</a>
-          <a href="#about">О компании</a>
-          <a href="#products">Продукция</a>
-          <a href="#trust">Нам доверяют</a>
-          <a href="#request">Заявка</a>
-          <a href="#contacts">Контакты</a>
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <div class="nav-overlay" aria-hidden="true"></div>
+
+        <nav class="main-nav" id="site-menu" aria-label="Главное меню">
+          <div class="main-nav__head">
+            <p class="main-nav__title">Меню</p>
+            <button class="menu-close" type="button" aria-label="Закрыть меню">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="main-nav__links">
+            <a class="active" href="index.html" aria-current="page">Главная</a>
+            <a href="products.html">Продукция</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="projects.html">Проекты</a>
+          </div>
         </nav>
-
-        
       </div>
     </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="hero-kicker">ПОСТАВКИ</p>
-            <h1>
-              <span>ЭЛЕКТРОТЕХНИЧЕСКОЙ</span>
-              <span>ПРОДУКЦИИ</span>
-              <span>И ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ</span>
+    <main class="site-main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-kicker">Поставки</p>
+            <h1 class="hero-title">
+              <span>Электротехнической</span><br>
+              продукции и промышленного оборудования
             </h1>
             <p class="hero-text">
-              Комплексное снабжение предприятий
-              и участие в тендерных поставках по всей России
+              Комплексное снабжение промышленных предприятий, подрядчиков
+              и снабженческих отделов по всей России.
             </p>
             <div class="hero-actions">
-              <a class="hero-button hero-button-primary" href="#request">
-                ПОЛУЧИТЬ КП
+              <a class="hero-button hero-button-primary" href="about.html">
+                Подробнее о компании
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
                   <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
-              <a class="hero-button hero-button-secondary" href="#products">КАТАЛОГ ПРОДУКЦИИ</a>
+              <a class="hero-button hero-button-secondary" href="products.html">Каталог продукции</a>
             </div>
           </div>
 
-         <div class="hero-visual">
-            <img class="hero-image" src="./images/hero-image.webp" alt="Поставка электротехнической продукции и промышленного оборудования">
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h10l3 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8l3-4Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M9 11h6M9 15h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              <div>
+                <strong>10+</strong>
+                <span>лет на рынке промышленного снабжения</span>
+              </div>
+            </div>
+            <div class="hero-stat">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M8 11h8M8 15h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              <div>
+                <strong>500+</strong>
+                <span>комплектных поставок для предприятий</span>
+              </div>
+            </div>
+            <div class="hero-stat">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 18a4 4 0 1 1 0-8 5 5 0 0 1 9.7-1.4A3.5 3.5 0 1 1 18 18Z" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              <div>
+                <strong>80+</strong>
+                <span>партнеров и поставщиков по РФ</span>
+              </div>
+            </div>
           </div>
-         </div>
-
-      
+        </div>
       </section>
 
       <div class="content-zone">
-        <section class="site-section about-section" id="about">
+        <section class="site-section">
           <div class="container">
-            <div class="section-shell about-grid">
-              <div class="about-copy">
-                <div class="section-heading compact">
-                  <h2>О КОМПАНИИ</h2>
-                </div>
-                <p class="section-lead">
-                  ООО «Снабжающая Компания» обеспечивает предприятия
-                  электротехнической продукцией и промышленным оборудованием по
-                  всей России.
-                </p>
-                <div class="section-text">
-                  <p>
-                    Работаем с промышленными объектами, подрядчиками и
-                    снабженческими отделами, подбираем позиции под
-                    спецификацию и сопровождаем закупку от запроса до отгрузки.
-                  </p>
-                  <p>
-                    Помогаем комплектовать заявки, сокращать сроки закупки и
-                    подбирать надежные решения под реальные задачи заказчика.
-                  </p>
-                </div>
+            <div class="section-shell">
+              <div class="section-heading">
+                <h2>О компании</h2>
+                <a class="section-link" href="about.html">
+                  Подробнее
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
               </div>
 
-              <div class="about-stats">
-                <article class="about-stat-card">
-                  <strong>10+</strong>
-                  <h3>лет на рынке</h3>
-                  <p>Комплексное снабжение и тендерные поставки.</p>
-                </article>
-                <article class="about-stat-card">
-                  <strong>500+</strong>
-                  <h3>успешных проектов</h3>
-                  <p>Поставки для предприятий, строительства и сервиса.</p>
-                </article>
-                <article class="about-stat-card">
-                  <strong>80+</strong>
-                  <h3>партнеров по РФ</h3>
-                  <p>Работа с поставщиками и логистикой по всей стране.</p>
-                </article>
+              <div class="about-grid">
+                <div>
+                  <p class="section-lead">
+                    ООО «Снабжающая Компания» обеспечивает предприятия электротехнической
+                    продукцией и промышленным оборудованием по всей России.
+                  </p>
+                  <div class="section-text">
+                    <p>
+                      Работаем с промышленными объектами, подрядчиками и снабженческими отделами,
+                      подбираем позиции под спецификацию и сопровождаем закупку от запроса до отгрузки.
+                    </p>
+                    <p>
+                      Помогаем комплектовать заявки, сокращать сроки закупки и подбирать надежные
+                      решения под реальные задачи заказчика.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="about-stats">
+                  <article class="about-stat-card">
+                    <strong>10+</strong>
+                    <h3>лет на рынке</h3>
+                    <p>Комплексное снабжение и тендерные поставки для промышленных задач.</p>
+                  </article>
+                  <article class="about-stat-card">
+                    <strong>500+</strong>
+                    <h3>успешных поставок</h3>
+                    <p>Комплектация заявок для предприятий, строительства и сервиса.</p>
+                  </article>
+                  <article class="about-stat-card">
+                    <strong>80+</strong>
+                    <h3>партнеров по РФ</h3>
+                    <p>Работа с поставщиками и логистикой по всей стране.</p>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="site-section products-section" id="products">
+        <section class="site-section">
           <div class="container">
-            <div class="section-heading">
-              <h2>КАТЕГОРИИ ПРОДУКЦИИ</h2>
-              <a href="#request" class="section-link">
-                Смотреть весь каталог
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                  <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-
-            <div class="products-grid">
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <defs>
-                      <linearGradient id="cat-bg-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#23344e" />
-                        <stop offset="100%" stop-color="#0b1629" />
-                      </linearGradient>
-                      <linearGradient id="cat-orange-1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ffb54c" />
-                        <stop offset="100%" stop-color="#ff7c00" />
-                      </linearGradient>
-                    </defs>
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="114" cy="124" rx="82" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(24 28)">
-                      <circle cx="30" cy="54" r="28" fill="#d7dee9" />
-                      <circle cx="30" cy="54" r="16" fill="none" stroke="url(#cat-orange-1)" stroke-width="8" />
-                      <circle cx="118" cy="42" r="26" fill="#d7dee9" />
-                      <circle cx="118" cy="42" r="15" fill="none" stroke="url(#cat-orange-1)" stroke-width="7" />
-                      <circle cx="86" cy="82" r="18" fill="#d7dee9" />
-                      <circle cx="86" cy="82" r="10" fill="none" stroke="url(#cat-orange-1)" stroke-width="5" />
-                      <path d="M30 54 86 82 118 42" fill="none" stroke="#687a92" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M30 54 86 82 118 42" fill="none" stroke="#aeb9ca" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
-                    </g>
+            <div class="section-shell">
+              <div class="section-heading">
+                <h2>Продукция</h2>
+                <a class="section-link" href="products.html">
+                  Смотреть все категории
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                    <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Кабельная продукция</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </article>
+                </a>
+              </div>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(40 16)">
-                      <rect x="12" y="18" width="96" height="104" rx="12" fill="#edf2f8" />
-                      <rect x="22" y="28" width="34" height="84" rx="8" fill="#f8fbff" />
-                      <rect x="64" y="28" width="34" height="84" rx="8" fill="#f8fbff" />
-                      <rect x="20" y="10" width="26" height="12" rx="4" fill="#ff8a07" />
-                      <rect x="74" y="10" width="26" height="12" rx="4" fill="#ff8a07" />
-                      <rect x="28" y="34" width="22" height="22" rx="4" fill="#102039" />
-                      <rect x="70" y="34" width="22" height="32" rx="4" fill="#102039" />
-                      <rect x="70" y="76" width="22" height="16" rx="4" fill="#cfd7e3" />
-                      <rect x="28" y="64" width="22" height="32" rx="4" fill="#cfd7e3" />
-                      <rect x="0" y="70" width="14" height="48" rx="6" fill="#808fa4" />
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Электрощитовое оборудование</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              <div class="products-grid">
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M11 30a9 9 0 1 1 0-18 8 8 0 0 1 7 4l5 8a7 7 0 1 0 6-11h-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Кабельная продукция</h3>
+                  <p class="product-card__text">Кабель, провод, аксессуары и комплектующие для промышленного монтажа.</p>
+                </a>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(32 24)">
-                      <rect x="18" y="38" width="110" height="68" rx="12" fill="#f0f4f9" />
-                      <rect x="8" y="48" width="20" height="48" rx="8" fill="#1a2c47" />
-                      <rect x="128" y="48" width="20" height="48" rx="8" fill="#1a2c47" />
-                      <rect x="28" y="46" width="90" height="52" rx="10" fill="#ffffff" />
-                      <rect x="44" y="56" width="40" height="18" rx="5" fill="#101f37" />
-                      <rect x="88" y="56" width="16" height="18" rx="5" fill="#ff8a06" />
-                      <g fill="#ff8a06">
-                        <circle cx="90" cy="88" r="5" />
-                        <circle cx="106" cy="88" r="5" />
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Автоматические выключатели</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M12 10h24v28H12zM18 18h12M18 24h12M18 30h7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
                     </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Электрощитовое оборудование</h3>
+                  <p class="product-card__text">Шкафы, щиты, корпуса и готовые решения для распределения и защиты.</p>
+                </a>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(46 16)">
-                      <rect x="0" y="40" width="112" height="74" rx="12" fill="#eaf0f7" />
-                      <rect x="10" y="50" width="92" height="54" rx="10" fill="#c9d2e0" />
-                      <g fill="#44546c">
-                        <rect x="6" y="48" width="8" height="60" rx="4" />
-                        <rect x="98" y="48" width="8" height="60" rx="4" />
-                      </g>
-                      <g fill="none" stroke="#34445d" stroke-width="4">
-                        <path d="M22 40V12" />
-                        <path d="M56 40V6" />
-                        <path d="M90 40V16" />
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Трансформаторы</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M14 14h20a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H14zM18 18v12M30 18v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Автоматические выключатели</h3>
+                  <p class="product-card__text">Модульная автоматика и аппараты защиты для низковольтных систем.</p>
+                </a>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(38 20)">
-                      <rect x="18" y="78" width="104" height="22" rx="8" fill="#45586f" />
-                      <rect x="40" y="58" width="20" height="20" rx="6" fill="#ff8a06" />
-                      <path d="M52 58 82 36l16 6-10 26Z" fill="#e2e8f2" />
-                      <path d="M88 42 110 58l-10 24-18-14Z" fill="#cbd4e1" />
-                      <path d="M98 56 132 34c12 8 18 20 16 34l-12 6-22-16Z" fill="#ffae47" />
-                      <circle cx="36" cy="106" r="10" fill="#0b1728" />
-                      <circle cx="108" cy="106" r="10" fill="#0b1728" />
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Промышленное оборудование</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M14 30h20M18 30V16M24 30V12M30 30V18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                      <rect x="12" y="30" width="24" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="2.2" />
                     </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Трансформаторы</h3>
+                  <p class="product-card__text">Силовые и измерительные трансформаторы для промышленной инфраструктуры.</p>
+                </a>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(34 22)">
-                      <rect x="22" y="22" width="108" height="72" rx="14" fill="#eef3f9" />
-                      <rect x="34" y="34" width="84" height="48" rx="10" fill="#ffffff" />
-                      <rect x="46" y="44" width="26" height="28" rx="6" fill="#102039" />
-                      <rect x="78" y="44" width="12" height="28" rx="4" fill="#ff8a06" />
-                      <rect x="96" y="44" width="12" height="28" rx="4" fill="#cad4e1" />
-                      <rect x="8" y="42" width="18" height="34" rx="7" fill="#4a5a71" />
-                      <rect x="126" y="42" width="18" height="34" rx="7" fill="#4a5a71" />
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Светотехническая продукция</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M24 10v6M24 32v6M14 20h20M16 28h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                      <rect x="14" y="16" width="20" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2.2" />
                     </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Светотехническая продукция</h3>
+                  <p class="product-card__text">Светильники, прожекторы и источники света для цехов и наружных площадок.</p>
+                </a>
 
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(26 18)">
-                      <rect x="24" y="68" width="120" height="20" rx="8" fill="#445770" />
-                      <rect x="40" y="26" width="22" height="42" rx="8" fill="#f4f8fd" />
-                      <rect x="70" y="16" width="28" height="52" rx="9" fill="#e3eaf3" />
-                      <rect x="106" y="30" width="22" height="38" rx="8" fill="#f8fbff" />
-                      <rect x="48" y="36" width="6" height="12" rx="2" fill="#ff8a06" />
-                      <rect x="80" y="26" width="8" height="18" rx="3" fill="#ff8a06" />
-                      <rect x="114" y="40" width="6" height="10" rx="2" fill="#ff8a06" />
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Релейная защита</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <a class="product-card" href="products.html">
+                  <div class="product-card__media" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M16 12h16v24H16zM24 18v12M20 22h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
                     </svg>
-                  </span>
-                </div>
-              </article>
-
-              <article class="category-card">
-                <div class="category-media">
-                  <svg viewBox="0 0 220 148" aria-hidden="true">
-                    <rect width="220" height="148" rx="18" fill="url(#cat-bg-1)" />
-                    <ellipse cx="110" cy="122" rx="80" ry="12" fill="#020913" opacity="0.5" />
-                    <g transform="translate(36 18)">
-                      <rect x="12" y="26" width="124" height="70" rx="14" fill="#edf2f8" />
-                      <rect x="26" y="38" width="44" height="46" rx="10" fill="#ffffff" />
-                      <rect x="78" y="38" width="44" height="46" rx="10" fill="#ffffff" />
-                      <path d="M48 46v30M94 46v30" fill="none" stroke="#102039" stroke-width="6" stroke-linecap="round" />
-                      <circle cx="58" cy="60" r="6" fill="#ff8a06" />
-                      <circle cx="104" cy="60" r="6" fill="#ff8a06" />
-                    </g>
-                  </svg>
-                </div>
-                <div class="category-info">
-                  <h3>Разъемы и клеммы</h3>
-                  <span class="category-arrow">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                      <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </span>
-                </div>
-              </article>
+                  </div>
+                  <h3 class="product-card__title">Релейная защита</h3>
+                  <p class="product-card__text">Реле, устройства контроля и оборудование для защиты и автоматики.</p>
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="site-section trust-section" id="trust">
+        <section class="site-section">
           <div class="container">
             <div class="section-shell trust-grid">
-              <div class="trust-copy">
+              <div>
                 <div class="section-heading compact">
-                  <h2>НАМ ДОВЕРЯЮТ</h2>
+                  <h2>Нам доверяют</h2>
                 </div>
                 <p class="section-lead">
-                  Нам доверяют проектные команды, производственные предприятия,
-                  монтажные организации и снабженческие отделы.
+                  Работаем с производственными предприятиями, подрядными организациями
+                  и снабженческими отделами по всей России.
                 </p>
                 <ul class="trust-list">
                   <li>Поставки под проект и оперативные закупки</li>
@@ -413,12 +290,12 @@
           </div>
         </section>
 
-        <section class="site-section request-section" id="request">
+        <section class="site-section">
           <div class="container">
             <div class="request-shell">
               <div class="request-copy">
                 <p class="request-kicker">Быстрый запрос</p>
-                <h2>ЗАЯВКА</h2>
+                <h2>Заявка</h2>
                 <p class="request-text">
                   Оставьте контакты, и менеджер свяжется с вами для расчета,
                   подбора и уточнения условий поставки.
@@ -432,35 +309,29 @@
 
               <form class="request-form" method="post">
                 <label class="form-field">
-                  <span>Имя</span>
+                  <span class="field-label">Имя</span>
                   <input type="text" name="request_name" placeholder="Ваше имя" required>
                 </label>
                 <label class="form-field">
-                  <span>Телефон</span>
+                  <span class="field-label">Телефон</span>
                   <input type="tel" name="request_phone" placeholder="+7 (___) ___-__-__" required>
                 </label>
-                <button class="submit-button" type="submit">
-                  ОТПРАВИТЬ
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-                    <path d="m13 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </button>
+                <button class="submit-button" type="submit">Отправить</button>
               </form>
             </div>
           </div>
         </section>
 
-        <section class="site-section contacts-section" id="contacts">
+        <section class="site-section">
           <div class="container">
-            <section class="contacts-shell">
+            <div class="contacts-shell">
               <div class="contacts-map-side">
-                <div class="map-frame map-frame-edge">
+                <div class="map-frame">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=92.933411%2C55.978951&mode=whatshere&whatshere%5Bpoint%5D=92.933411%2C55.978951&whatshere%5Bzoom%5D=17&z=17"
+                    src="https://yandex.ru/map-widget/v1/?ll=92.935630%2C55.979087&mode=whatshere&whatshere%5Bpoint%5D=92.935630%2C55.979087&whatshere%5Bzoom%5D=17&z=17"
+                    title="Яндекс Карта с локацией компании"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Карта с локацией компании"
                   ></iframe>
                 </div>
               </div>
@@ -471,42 +342,40 @@
                   <span class="contacts-heading-accent" aria-hidden="true"></span>
                 </div>
 
-                <div class="contacts-meta">
-                  <a class="contacts-link" href="tel:+73912887708">+7 (391) 288-77-08</a>
-                  <a class="contacts-link" href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
-                  <p class="contacts-note">Координаты: 55.978951, 92.933411</p>
-                </div>
+                <div class="contacts-top">
+                  <address class="contacts-meta">
+                    <a class="contacts-link" href="tel:+73912887708">+7 (391) 288-77-08</a>
+                    <a class="contacts-link" href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
+                    <p class="contacts-note">Принимаем запросы на подбор оборудования, уточнение наличия, сроков поставки и подготовку коммерческого предложения.</p>
+                    <p class="contacts-note">Красноярск. Точка на карте указана по координатам 55.979087, 92.935630.</p>
+                  </address>
 
-                <div class="contacts-hours">
-                  <p class="contacts-hours-title">Режим работы</p>
-                  <ul class="work-hours work-hours-dark">
-                    <li><span>Понедельник</span><strong>09:00-17:00</strong></li>
-                    <li><span>Вторник</span><strong>09:00-17:00</strong></li>
-                    <li><span>Среда</span><strong>09:00-17:00</strong></li>
-                    <li><span>Четверг</span><strong>09:00-17:00</strong></li>
-                    <li><span>Пятница</span><strong>09:00-17:00</strong></li>
-                    <li><span>Суббота</span><strong>Выходной</strong></li>
-                    <li><span>Воскресенье</span><strong>Выходной</strong></li>
-                  </ul>
+                  <div class="contacts-hours">
+                    <p class="contacts-hours-title">Режим работы</p>
+                    <ul class="work-hours">
+                      <li><span>Пн–Пт</span><strong>09:00 – 18:00</strong></li>
+                      <li><span>Сб–Вс</span><strong>Выходной</strong></li>
+                    </ul>
+                  </div>
                 </div>
 
                 <form class="contacts-form" method="post">
                   <label class="contacts-form-field">
-                    <span class="sr-only">Имя</span>
-                    <input type="text" name="feedback_name" placeholder="Имя">
+                    <span>Имя</span>
+                    <input type="text" name="feedback_name" placeholder="Ваше имя">
                   </label>
                   <label class="contacts-form-field">
-                    <span class="sr-only">Телефон</span>
+                    <span>Телефон</span>
                     <input type="tel" name="feedback_phone" placeholder="+7 (___) ___-__-__">
                   </label>
                   <label class="contacts-form-field contacts-form-field-wide">
-                    <span class="sr-only">Комментарий</span>
-                    <textarea name="feedback_message" placeholder="Комментарий"></textarea>
+                    <span>Комментарий</span>
+                    <textarea name="feedback_message" placeholder="Кратко опишите ваш запрос"></textarea>
                   </label>
                   <button class="contacts-submit" type="submit">Отправить</button>
                 </form>
               </div>
-            </section>
+            </div>
           </div>
         </section>
       </div>
@@ -523,11 +392,11 @@
         </div>
 
         <nav class="footer-nav" aria-label="Меню в подвале">
-          <a href="#about">О компании</a>
-          <a href="#products">Продукция</a>
-          <a href="#trust">Нам доверяют</a>
-          <a href="#request">Заявка</a>
-          <a href="#contacts">Контакты</a>
+          <a href="index.html">Главная</a>
+          <a href="products.html">Продукция</a>
+          <a href="about.html">О компании</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="projects.html">Проекты</a>
         </nav>
 
         <div class="footer-meta">

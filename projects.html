@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ООО Снабжающая Компания | Проекты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="Вектор.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-inner page-projects">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="header-brand" href="index.html" aria-label="ООО Снабжающая Компания">
+          <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <div class="nav-overlay" aria-hidden="true"></div>
+
+        <nav class="main-nav" id="site-menu" aria-label="Главное меню">
+          <div class="main-nav__head">
+            <p class="main-nav__title">Меню</p>
+            <button class="menu-close" type="button" aria-label="Закрыть меню">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="main-nav__links">
+            <a href="index.html">Главная</a>
+            <a href="products.html">Продукция</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
+            <a class="active" href="projects.html" aria-current="page">Проекты</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="content-zone">
+        <section class="page-intro">
+          <div class="container">
+            <div class="page-intro__shell">
+              <p class="page-intro__kicker">Проекты</p>
+              <h1 class="page-intro__title">Проекты и направления поставок</h1>
+              <p class="page-intro__text">
+                Комплектуем заявки для производственных предприятий, строительных объектов,
+                монтажных организаций и сервисных подразделений. Ниже приведены типовые
+                задачи, с которыми к нам обращаются заказчики.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="container">
+            <div class="section-shell">
+              <div class="section-heading compact">
+                <h2>Проекты</h2>
+              </div>
+
+              <div class="projects-grid">
+                <article class="project-card">
+                  <span class="project-card__tag">Поставка</span>
+                  <h3>Комплектация энергослужбы производственного предприятия</h3>
+                  <p>Подбор кабельной продукции, автоматики и светотехнических решений для планового обновления участка.</p>
+                  <div class="project-card__meta">
+                    <span>Красноярск</span>
+                    <span>12 дней</span>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <span class="project-card__tag">Под проект</span>
+                  <h3>Поставка щитового оборудования на строительный объект</h3>
+                  <p>Комплектная заявка по спецификации с согласованием аналогов и контролем сроков отгрузки.</p>
+                  <div class="project-card__meta">
+                    <span>СФО</span>
+                    <span>18 дней</span>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <span class="project-card__tag">Модернизация</span>
+                  <h3>Оснащение участка низковольтной аппаратурой</h3>
+                  <p>Подбор автоматических выключателей, релейной защиты и сопутствующих комплектующих.</p>
+                  <div class="project-card__meta">
+                    <span>Промышленный объект</span>
+                    <span>9 дней</span>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <span class="project-card__tag">Комплектация</span>
+                  <h3>Поставка трансформаторного оборудования и арматуры</h3>
+                  <p>Согласование оборудования под технические требования и организация поставки на площадку.</p>
+                  <div class="project-card__meta">
+                    <span>Складская отгрузка</span>
+                    <span>16 дней</span>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <span class="project-card__tag">Снабжение</span>
+                  <h3>Комплексная заявка для монтажной организации</h3>
+                  <p>Сборка закупки по нескольким категориям с единым пакетом документов и логистикой.</p>
+                  <div class="project-card__meta">
+                    <span>Монтажный подряд</span>
+                    <span>7 дней</span>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <span class="project-card__tag">Подбор</span>
+                  <h3>Замена оборудования на действующем производстве</h3>
+                  <p>Подбор аналогов по ограниченной спецификации и уточнение совместимости по действующей схеме.</p>
+                  <div class="project-card__meta">
+                    <span>Эксплуатация</span>
+                    <span>5 дней</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+          <p class="footer-description">
+            Поставка электротехнической продукции и промышленного оборудования
+            для предприятий по всей России.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Меню в подвале">
+          <a href="index.html">Главная</a>
+          <a href="products.html">Продукция</a>
+          <a href="about.html">О компании</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="projects.html">Проекты</a>
+        </nav>
+
+        <div class="footer-meta">
+          <a href="tel:+73912887708">+7 (391) 288-77-08</a>
+          <a href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
+          <span>© 2026 ООО «Снабжающая Компания»</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

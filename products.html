@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ООО Снабжающая Компания | Каталог продукции</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="Вектор.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-inner page-products">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="header-brand" href="index.html" aria-label="ООО Снабжающая Компания">
+          <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <div class="nav-overlay" aria-hidden="true"></div>
+
+        <nav class="main-nav" id="site-menu" aria-label="Главное меню">
+          <div class="main-nav__head">
+            <p class="main-nav__title">Меню</p>
+            <button class="menu-close" type="button" aria-label="Закрыть меню">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="main-nav__links">
+            <a href="index.html">Главная</a>
+            <a class="active" href="products.html" aria-current="page">Продукция</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="projects.html">Проекты</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="content-zone">
+        <section class="page-intro">
+          <div class="container">
+            <div class="page-intro__shell">
+              <p class="page-intro__kicker">Продукция</p>
+              <h1 class="page-intro__title">Каталог промышленного оборудования и комплектующих</h1>
+              <p class="page-intro__text">
+                Каталог объединяет основные направления поставок: буровые станки,
+                комплектующие, ходовую часть, сервисные узлы и запасные части для
+                промышленной эксплуатации и карьерных работ.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="container">
+            <div class="catalog-shell">
+              <div class="catalog-layout">
+                <aside class="catalog-sidebar" aria-label="Категории продукции">
+                  <nav class="catalog-sidebar__panel">
+                    <p class="catalog-sidebar__label">Категории</p>
+                    <div class="catalog-sidebar__nav">
+                      <a class="catalog-sidebar__link is-active" href="products.html" aria-current="page">
+                        <strong>Буровое оборудование</strong>
+                        <span>18 позиций</span>
+                      </a>
+                      <ul class="catalog-sidebar__sublist">
+                        <li><a class="is-current" href="products.html">Буровые станки</a></li>
+                        <li><a href="products.html">Мачты и каретки</a></li>
+                        <li><a href="products.html">Ходовая часть</a></li>
+                        <li><a href="products.html">Запасные части</a></li>
+                      </ul>
+
+                      <a class="catalog-sidebar__link" href="products.html">
+                        <strong>Шахтный транспорт</strong>
+                        <span>12 позиций</span>
+                      </a>
+                      <a class="catalog-sidebar__link" href="products.html">
+                        <strong>Обогатительное оборудование</strong>
+                        <span>15 позиций</span>
+                      </a>
+                      <a class="catalog-sidebar__link" href="products.html">
+                        <strong>Оборудование подъема</strong>
+                        <span>9 позиций</span>
+                      </a>
+                      <a class="catalog-sidebar__link" href="products.html">
+                        <strong>Оборудование очистных забоев</strong>
+                        <span>11 позиций</span>
+                      </a>
+                      <a class="catalog-sidebar__link" href="products.html">
+                        <strong>Комплектующие и ЗИП</strong>
+                        <span>24 позиции</span>
+                      </a>
+                    </div>
+                  </nav>
+                </aside>
+
+                <div class="catalog-content">
+                  <section class="catalog-head" aria-labelledby="catalog-title">
+                    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                      <a href="index.html">Главная</a>
+                      <span>»</span>
+                      <a href="products.html">Продукция</a>
+                      <span>»</span>
+                      <span>Буровое оборудование</span>
+                    </nav>
+
+                    <div class="catalog-head__row">
+                      <div class="catalog-head__copy">
+                        <p class="catalog-head__label">Активная категория</p>
+                        <h2 id="catalog-title">Буровое оборудование</h2>
+                        <p class="catalog-head__text">
+                          Самоходные буровые станки, мачты, каретки, ходовая часть и запасные
+                          части для открытых горных работ. В разделе собраны позиции для
+                          первичной комплектации, ремонта и сервисного сопровождения техники.
+                        </p>
+                      </div>
+                      <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
+                    </div>
+                  </section>
+
+                  <section class="catalog-product-grid" aria-label="Список товаров">
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">Хит поставок</span>
+                        <div class="catalog-card__visual catalog-card__visual--rig" aria-hidden="true">
+                          <span class="catalog-card__visual-title">СБШ-250-40ДГ «Универсал»</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Буровые станки</p>
+                        <h3 class="catalog-card__title">Дизель-гидравлический буровой станок СБШ-250-40ДГ</h3>
+                        <p class="catalog-card__summary">
+                          Самоходный станок вращательного бурения для бурения взрывных скважин
+                          на карьерах и промышленных площадках.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Диаметр бурения: 215-250 мм</li>
+                          <li>Глубина бурения: до 48 м</li>
+                          <li>Дизельный привод и автономная работа</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. BO-250-40DG</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">Под заказ</span>
+                        <div class="catalog-card__visual catalog-card__visual--mast" aria-hidden="true">
+                          <span class="catalog-card__visual-title">Мачта буровая в сборе</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Мачты и каретки</p>
+                        <h3 class="catalog-card__title">Мачта буровая для станков серии СБШ</h3>
+                        <p class="catalog-card__summary">
+                          Усиленная конструкция для замены или комплектации буровых машин при
+                          капитальном ремонте и модернизации.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Поставка в сборе с направляющими</li>
+                          <li>Совместимость с серией СБШ</li>
+                          <li>Подбор под техническое задание</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. MT-210-SB</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">В наличии</span>
+                        <div class="catalog-card__visual catalog-card__visual--truck" aria-hidden="true">
+                          <span class="catalog-card__visual-title">Гусеничный ход</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Ходовая часть</p>
+                        <h3 class="catalog-card__title">Гусеничный ход полужесткого типа</h3>
+                        <p class="catalog-card__summary">
+                          Узел для ремонта и восстановления буровых станков с высокой нагрузкой
+                          на ходовую часть при карьерных работах.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Ресурс для интенсивной эксплуатации</li>
+                          <li>Поставка комплектом или поузлово</li>
+                          <li>Подбор по модели станка</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. GH-540-M</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">Комплект ЗИП</span>
+                        <div class="catalog-card__visual catalog-card__visual--spares" aria-hidden="true">
+                          <span class="catalog-card__visual-title">Узлы вращателя</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Запасные части</p>
+                        <h3 class="catalog-card__title">Комплект запасных частей на буровой станок</h3>
+                        <p class="catalog-card__summary">
+                          Поставка расходников, узлов вращателя, переходников и сервисных
+                          комплектов под конкретную модель оборудования.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Подбор по серийному номеру</li>
+                          <li>Согласование состава поставки</li>
+                          <li>Документация и упаковочный лист</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. ZIP-870-K</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">Новая серия</span>
+                        <div class="catalog-card__visual catalog-card__visual--rig" aria-hidden="true">
+                          <span class="catalog-card__visual-title">СБШ-160/200</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Буровые станки</p>
+                        <h3 class="catalog-card__title">Самоходный буровой станок СБШ-160/200</h3>
+                        <p class="catalog-card__summary">
+                          Решение для бурения скважин меньшего диаметра на участках, где важны
+                          маневренность, автономность и быстрый запуск.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Для бурения на горных породах разной крепости</li>
+                          <li>Комплектация под проект заказчика</li>
+                          <li>Поставка с сервисной документацией</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. BO-160-200</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="catalog-card" href="product.html">
+                      <div class="catalog-card__media">
+                        <span class="catalog-card__badge">Сервисная поставка</span>
+                        <div class="catalog-card__visual catalog-card__visual--mast" aria-hidden="true">
+                          <span class="catalog-card__visual-title">Каретка вращателя</span>
+                        </div>
+                      </div>
+                      <div class="catalog-card__body">
+                        <p class="catalog-card__category">Узлы и комплектующие</p>
+                        <h3 class="catalog-card__title">Каретка вращателя для буровых машин серии СБШ</h3>
+                        <p class="catalog-card__summary">
+                          Узел для планового ремонта и замены оборудования с учетом модели,
+                          комплектации и текущего состояния техники.
+                        </p>
+                        <ul class="catalog-card__specs">
+                          <li>Поставка в сборе или по составу</li>
+                          <li>Контроль совместимости по модели</li>
+                          <li>Сопровождение заявки до отгрузки</li>
+                        </ul>
+                        <div class="catalog-card__footer">
+                          <span class="catalog-card__code">Арт. KR-320-R</span>
+                          <span class="catalog-card__link">Открыть карточку</span>
+                        </div>
+                      </div>
+                    </a>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="container">
+            <div class="request-shell">
+              <div class="request-copy">
+                <p class="request-kicker">Подбор по каталогу</p>
+                <h2>Заявка на оборудование</h2>
+                <p class="request-text">
+                  Отправьте запрос по нужной позиции или категории. Подберем оборудование,
+                  уточним комплектацию, срок поставки и подготовим коммерческое предложение.
+                </p>
+                <ul class="request-list">
+                  <li>Подбор по спецификации или маркировке</li>
+                  <li>Комплектация узлами, ЗИП и сопутствующими позициями</li>
+                  <li>Подготовка предложения под тендер или проект</li>
+                </ul>
+              </div>
+
+              <form class="request-form" method="post">
+                <label class="form-field">
+                  <span class="field-label">Имя</span>
+                  <input type="text" name="request_name" placeholder="Ваше имя" required>
+                </label>
+                <label class="form-field">
+                  <span class="field-label">Телефон</span>
+                  <input type="tel" name="request_phone" placeholder="+7 (___) ___-__-__" required>
+                </label>
+                <button class="submit-button" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+          <p class="footer-description">
+            Поставка электротехнической продукции и промышленного оборудования
+            для предприятий по всей России.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Меню в подвале">
+          <a href="index.html">Главная</a>
+          <a href="products.html">Продукция</a>
+          <a href="about.html">О компании</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="projects.html">Проекты</a>
+        </nav>
+
+        <div class="footer-meta">
+          <a href="tel:+73912887708">+7 (391) 288-77-08</a>
+          <a href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
+          <span>© 2026 ООО «Снабжающая Компания»</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

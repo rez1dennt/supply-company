@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ООО Снабжающая Компания | Контакты</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="Вектор.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-inner page-contacts">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="header-brand" href="index.html" aria-label="ООО Снабжающая Компания">
+          <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <div class="nav-overlay" aria-hidden="true"></div>
+
+        <nav class="main-nav" id="site-menu" aria-label="Главное меню">
+          <div class="main-nav__head">
+            <p class="main-nav__title">Меню</p>
+            <button class="menu-close" type="button" aria-label="Закрыть меню">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="main-nav__links">
+            <a href="index.html">Главная</a>
+            <a href="products.html">Продукция</a>
+            <a href="about.html">О компании</a>
+            <a class="active" href="contacts.html" aria-current="page">Контакты</a>
+            <a href="projects.html">Проекты</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <div class="content-zone">
+        <section class="page-intro">
+          <div class="container">
+            <div class="page-intro__shell">
+              <p class="page-intro__kicker">Контакты</p>
+              <h1 class="page-intro__title">Контакты отдела снабжения</h1>
+              <p class="page-intro__text">
+                Свяжитесь с нами по вопросам подбора электротехнической продукции,
+                сроков поставки, наличия на складе и подготовки коммерческого предложения.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="site-section">
+          <div class="container">
+            <div class="contacts-shell">
+              <div class="contacts-map-side">
+                <div class="map-frame">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=92.935630%2C55.979087&mode=whatshere&whatshere%5Bpoint%5D=92.935630%2C55.979087&whatshere%5Bzoom%5D=17&z=17"
+                    title="Яндекс Карта с локацией компании"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="contacts-panel">
+                <div class="contacts-heading">
+                  <h2>Контакты</h2>
+                  <span class="contacts-heading-accent" aria-hidden="true"></span>
+                </div>
+
+                <div class="contacts-top">
+                  <address class="contacts-meta">
+                    <a class="contacts-link" href="tel:+73912887708">+7 (391) 288-77-08</a>
+                    <a class="contacts-link" href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
+                    <p class="contacts-note">Принимаем заявки от промышленных предприятий, подрядчиков и снабженческих отделов.</p>
+                    <p class="contacts-note">Красноярск. Точка на карте указана по координатам 55.979087, 92.935630.</p>
+                  </address>
+
+                  <div class="contacts-hours">
+                    <p class="contacts-hours-title">Режим работы</p>
+                    <ul class="work-hours">
+                      <li><span>Пн–Пт</span><strong>09:00 – 18:00</strong></li>
+                      <li><span>Сб–Вс</span><strong>Выходной</strong></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <form class="contacts-form" method="post">
+                  <label class="contacts-form-field">
+                    <span>Имя</span>
+                    <input type="text" name="feedback_name" placeholder="Ваше имя">
+                  </label>
+                  <label class="contacts-form-field">
+                    <span>Телефон</span>
+                    <input type="tel" name="feedback_phone" placeholder="+7 (___) ___-__-__">
+                  </label>
+                  <label class="contacts-form-field contacts-form-field-wide">
+                    <span>Комментарий</span>
+                    <textarea name="feedback_message" placeholder="Кратко опишите ваш запрос"></textarea>
+                  </label>
+                  <button class="contacts-submit" type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
+          <p class="footer-description">
+            Поставка электротехнической продукции и промышленного оборудования
+            для предприятий по всей России.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Меню в подвале">
+          <a href="index.html">Главная</a>
+          <a href="products.html">Продукция</a>
+          <a href="about.html">О компании</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="projects.html">Проекты</a>
+        </nav>
+
+        <div class="footer-meta">
+          <a href="tel:+73912887708">+7 (391) 288-77-08</a>
+          <a href="mailto:info@snab-comp.ru">info@snab-comp.ru</a>
+          <span>© 2026 ООО «Снабжающая Компания»</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
