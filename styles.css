@@ -160,6 +160,10 @@ button {
   gap: 24px;
 }
 
+.main-nav__contacts {
+  display: none;
+}
+
 .main-nav__title {
   margin: 0;
 }
@@ -2108,6 +2112,29 @@ button {
     -webkit-overflow-scrolling: touch;
   }
 
+  .main-nav__contacts {
+    display: grid;
+    gap: 8px;
+    padding: 14px 18px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  }
+
+  .main-nav__contacts a {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .main-nav__contacts a:last-child {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
   .menu-close {
     display: inline-flex;
     background: rgba(255, 255, 255, 0.08);
@@ -2674,6 +2701,11 @@ button {
 
   .main-nav__links {
     gap: 8px;
+    padding: 12px 14px 16px;
+  }
+
+  .main-nav__contacts {
+    gap: 6px;
     padding: 12px 14px 16px;
   }
 
