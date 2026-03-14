@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ООО Снабжающая Компания | Щит распределительный ЩРН-36</title>
+  <title>ООО Снабжающая Компания | Карточка товара</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" href="Вектор.svg" type="image/svg+xml">
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body class="page-inner page-product">
+<body class="page-inner page-product" data-product-page>
   <div class="page-shell">
     <header class="site-header">
       <div class="container header-row">
@@ -62,13 +62,13 @@
                 <span>»</span>
                 <a href="products.html">Продукция</a>
                 <span>»</span>
-                <a href="products.html?category=category-electro">Электротехническое оборудование</a>
+                <a href="products.html?category=category-electro" data-product-category-link>Электротехническое оборудование</a>
                 <span>»</span>
-                <span>Щит распределительный ЩРН-36</span>
+                <span data-product-breadcrumb-name>Щит распределительный ЩРН-36</span>
               </nav>
               <p class="page-intro__kicker">Карточка товара</p>
-              <h1 class="page-intro__title">Щит распределительный ЩРН-36</h1>
-              <p class="page-intro__text">
+              <h1 class="page-intro__title" data-product-name>Щит распределительный ЩРН-36</h1>
+              <p class="page-intro__text" data-product-summary>
                 Шаблон карточки товара подготовлен под интеграцию с WooCommerce: галерея,
                 блок контактов и табы могут быть связаны с product gallery, атрибутами
                 и ACF-полями без изменения общей структуры страницы.
@@ -94,7 +94,7 @@
                     </div>
                   </figure>
 
-                  <div class="product-gallery__thumbs flex-control-thumbs" role="list">
+                  <div class="product-gallery__thumbs flex-control-thumbs" role="list" data-product-gallery-thumbs>
                     <button class="product-thumb is-active" type="button" data-gallery-thumb data-image-src="images/product-switchboard-main.svg" data-image-alt="Щит распределительный ЩРН-36, основной вид" data-badge="Основной вид" data-title="Щит распределительный ЩРН-36" data-caption="Навесной щит для распределения питания и защиты групповых линий на промышленном объекте.">
                       <img class="product-thumb__image" src="images/product-switchboard-main.svg" alt="">
                     </button>
@@ -113,8 +113,8 @@
                 <aside class="product-aside summary entry-summary">
                   <div>
                     <p class="product-aside__label">Производитель</p>
-                    <h2 class="product-aside__title">IEK</h2>
-                    <p class="product-aside__text">
+                    <h2 class="product-aside__title" data-product-manufacturer>IEK</h2>
+                    <p class="product-aside__text" data-product-contact-text>
                       Контактный блок можно связать с производителем, менеджером категории или
                       отдельным WooCommerce полем без перестройки верстки.
                     </p>
@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="product-tab-panel" id="product-panel-purpose" role="tabpanel" data-tab-panel="purpose" data-field-source="acf:purpose">
-                  <div class="product-copy">
+                  <div class="product-copy" data-product-purpose>
                     <p>
                       Таб "Предназначение" рассчитан под описание применения товара. Здесь можно
                       выводить стандартное описание WooCommerce или отдельное ACF-поле для задач,
@@ -165,7 +165,7 @@
                           <th>Значение</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody data-product-specs>
                         <tr>
                           <td>Тип монтажа</td>
                           <td>Навесной</td>
@@ -196,7 +196,7 @@
                 </div>
 
                 <div class="product-tab-panel" id="product-panel-media" role="tabpanel" data-tab-panel="media" data-field-source="acf:media_gallery" hidden>
-                  <div class="product-media-grid">
+                  <div class="product-media-grid" data-product-media>
                     <article class="product-media-card">
                       <figure class="product-media-card__figure">
                         <img class="product-media-card__image" src="images/product-switchboard-detail.svg" alt="Щит распределительный ЩРН-36, дополнительное фото">
@@ -244,6 +244,10 @@
         <div class="footer-meta">
           <a href="tel:+73912887708">+7 (391) 288-77-08</a>
           <a href="mailto:snabcom124@mail.ru">snabcom124@mail.ru</a>
+          <div class="footer-legal" aria-label="Реквизиты компании">
+            <span class="footer-legal__label">ИНН / КПП</span>
+            <span class="footer-legal__value">2464154170 / 246401001</span>
+          </div>
           <span>© 2026 ООО «Снабжающая Компания»</span>
         </div>
       </div>
