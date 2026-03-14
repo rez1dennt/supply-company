@@ -62,11 +62,10 @@
           <div class="container">
             <div class="page-intro__shell">
               <p class="page-intro__kicker">Проекты</p>
-              <h1 class="page-intro__title">Проекты и направления поставок</h1>
+              <h1 class="page-intro__title">Проекты, поставки и кейсы</h1>
               <p class="page-intro__text">
-                Комплектуем заявки для производственных предприятий, строительных объектов,
-                монтажных организаций и сервисных подразделений. Ниже приведены типовые
-                задачи, с которыми к нам обращаются заказчики.
+                Страница оформлена как база под будущие кейсы: сюда можно добавлять фото,
+                краткое описание выполненной поставки, объект, категорию и результат по проекту.
               </p>
             </div>
           </div>
@@ -74,69 +73,157 @@
 
         <section class="site-section">
           <div class="container">
-            <div class="section-shell">
+            <div class="section-shell projects-showcase">
               <div class="section-heading compact">
-                <h2>Проекты</h2>
+                <h2>Кейсы поставок</h2>
               </div>
+              <p class="section-lead">
+                Каждый кейс можно расширять: добавить фото объекта, подпись к изображению,
+                детали поставки и результат для заказчика без изменения общей структуры страницы.
+              </p>
 
               <div class="projects-grid">
-                <article class="project-card">
-                  <span class="project-card__tag">Поставка</span>
-                  <h3>Комплектация энергослужбы производственного предприятия</h3>
-                  <p>Подбор кабельной продукции, автоматики и светотехнических решений для планового обновления участка.</p>
-                  <div class="project-card__meta">
-                    <span>Красноярск</span>
-                    <span>12 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Место под фото щитовой, узла подключения или отгрузки на объект.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Электротехническое оборудование</span>
+                    <h3 class="project-case__title">Комплектация энергослужбы производственного участка</h3>
+                    <p class="project-case__text">Подобрали низковольтную аппаратуру, кабельную продукцию и комплектующие по спецификации заказчика с одной точкой координации по документам и срокам поставки.</p>
+                    <div class="project-case__meta">
+                      <span>Красноярск</span>
+                      <span>Поставка под проект</span>
+                      <span>Фото + описание</span>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
-                  <span class="project-card__tag">Под проект</span>
-                  <h3>Поставка щитового оборудования на строительный объект</h3>
-                  <p>Комплектная заявка по спецификации с согласованием аналогов и контролем сроков отгрузки.</p>
-                  <div class="project-card__meta">
-                    <span>СФО</span>
-                    <span>18 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Здесь можно показать установленное климатическое оборудование или процесс монтажа.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Климатическая техника</span>
+                    <h3 class="project-case__title">Поставка вентиляционного и климатического оборудования для складского комплекса</h3>
+                    <p class="project-case__text">Согласовали оборудование под режим эксплуатации, подобрали позиции по площади объекта и обеспечили поставку комплектом без дробления заявки на несколько поставщиков.</p>
+                    <div class="project-case__meta">
+                      <span>СФО</span>
+                      <span>Инженерный объект</span>
+                      <span>Фото + подпись</span>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
-                  <span class="project-card__tag">Модернизация</span>
-                  <h3>Оснащение участка низковольтной аппаратурой</h3>
-                  <p>Подбор автоматических выключателей, релейной защиты и сопутствующих комплектующих.</p>
-                  <div class="project-card__meta">
-                    <span>Промышленный объект</span>
-                    <span>9 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Подходит для фото ремонтной зоны, подъемников, компрессорного поста или готового участка.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Гаражное оборудование</span>
+                    <h3 class="project-case__title">Оснащение ремонтной зоны транспортного подразделения</h3>
+                    <p class="project-case__text">Собрали поставку гаражного оборудования для сервисного бокса: от базового оснащения до сопутствующих позиций, чтобы заказчик закрыл запуск участка одной закупкой.</p>
+                    <div class="project-case__meta">
+                      <span>Транспортный участок</span>
+                      <span>Комплексная поставка</span>
+                      <span>Готово для кейса</span>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
-                  <span class="project-card__tag">Комплектация</span>
-                  <h3>Поставка трансформаторного оборудования и арматуры</h3>
-                  <p>Согласование оборудования под технические требования и организация поставки на площадку.</p>
-                  <div class="project-card__meta">
-                    <span>Складская отгрузка</span>
-                    <span>16 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Можно показать складскую тару, комплект крепежа и фото зоны хранения после запуска.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Тара и крепеж</span>
+                    <h3 class="project-case__title">Комплектация складского участка тарой и метизами</h3>
+                    <p class="project-case__text">Подобрали складскую тару, крепеж и сопутствующие позиции для запуска участка хранения и внутрицеховой логистики с учетом условий эксплуатации и частоты использования.</p>
+                    <div class="project-case__meta">
+                      <span>Производственный склад</span>
+                      <span>Логистика и хранение</span>
+                      <span>Фото + результат</span>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
-                  <span class="project-card__tag">Снабжение</span>
-                  <h3>Комплексная заявка для монтажной организации</h3>
-                  <p>Сборка закупки по нескольким категориям с единым пакетом документов и логистикой.</p>
-                  <div class="project-card__meta">
-                    <span>Монтажный подряд</span>
-                    <span>7 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Подходит для снимка узла трубопровода, арматуры после монтажа или отгрузки на площадку.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Арматура</span>
+                    <h3 class="project-case__title">Поставка запорной и регулирующей арматуры для технологического узла</h3>
+                    <p class="project-case__text">Согласовали арматуру под параметры среды, обеспечили комплектность заявки и организовали поставку с понятной номенклатурой для монтажной и эксплуатационной команд.</p>
+                    <div class="project-case__meta">
+                      <span>Промышленный объект</span>
+                      <span>Технологическая линия</span>
+                      <span>Фото + характеристика</span>
+                    </div>
                   </div>
                 </article>
 
-                <article class="project-card">
-                  <span class="project-card__tag">Подбор</span>
-                  <h3>Замена оборудования на действующем производстве</h3>
-                  <p>Подбор аналогов по ограниченной спецификации и уточнение совместимости по действующей схеме.</p>
-                  <div class="project-card__meta">
-                    <span>Эксплуатация</span>
-                    <span>5 дней</span>
+                <article class="project-case">
+                  <div class="project-case__media-card">
+                    <div class="project-case__media" aria-hidden="true">
+                      <svg viewBox="0 0 48 48">
+                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
+                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
+                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
+                      </svg>
+                      <span>Фото проекта</span>
+                    </div>
+                    <p class="project-case__media-note">Место под фото смешанной поставки: инструмент, рабочие места, расходные материалы и комплектующие.</p>
+                  </div>
+                  <div class="project-case__content-card">
+                    <span class="project-case__tag">Смешанная заявка</span>
+                    <h3 class="project-case__title">Комплексная поставка для сервисной и инженерной команды</h3>
+                    <p class="project-case__text">Объединили инструмент, компьютерную технику и промышленную химию в один пакет поставки, чтобы заказчик получил согласованный комплект без разрыва по срокам и документам.</p>
+                    <div class="project-case__meta">
+                      <span>Многопозиционная заявка</span>
+                      <span>Сервисный запуск</span>
+                      <span>Фото + описание этапов</span>
+                    </div>
                   </div>
                 </article>
               </div>

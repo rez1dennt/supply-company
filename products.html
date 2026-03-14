@@ -18,15 +18,12 @@
         <a class="header-brand" href="index.html" aria-label="ООО Снабжающая Компания">
           <img class="header__logo" src="Вектор.svg" alt="ООО Снабжающая Компания">
         </a>
-
         <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="site-menu" aria-expanded="false">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
           </svg>
         </button>
-
         <div class="nav-overlay" aria-hidden="true"></div>
-
         <nav class="main-nav" id="site-menu" aria-label="Главное меню">
           <div class="main-nav__head">
             <p class="main-nav__title">Меню</p>
@@ -48,25 +45,28 @@
             <a href="mailto:snabcom124@mail.ru">snabcom124@mail.ru</a>
           </div>
         </nav>
-
         <div class="header-contacts" aria-label="Контакты компании">
           <a href="tel:+73912887708">+7 (391) 288-77-08</a>
           <a href="mailto:snabcom124@mail.ru">snabcom124@mail.ru</a>
         </div>
       </div>
     </header>
-
     <main class="site-main">
       <div class="content-zone">
         <section class="page-intro">
           <div class="container">
             <div class="page-intro__shell">
-              <p class="page-intro__kicker">Продукция</p>
-              <h1 class="page-intro__title">Каталог промышленного оборудования и комплектующих</h1>
+              <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a href="index.html">Главная</a>
+                <span>»</span>
+                <span>Продукция</span>
+              </nav>
+              <p class="page-intro__kicker">Каталог</p>
+              <h1 class="page-intro__title">Каталог категорий и товаров</h1>
               <p class="page-intro__text">
-                Каталог объединяет основные направления поставок: буровые станки,
-                комплектующие, ходовую часть, сервисные узлы и запасные части для
-                промышленной эксплуатации и карьерных работ.
+                Страница собрана как архив каталога под будущую интеграцию с WooCommerce:
+                слева меню категорий и подкатегорий, справа товарный список выбранной категории
+                в формате product loop.
               </p>
             </div>
           </div>
@@ -74,227 +74,675 @@
 
         <section class="site-section">
           <div class="container">
-            <div class="catalog-shell">
+            <div class="catalog-shell catalog-shell--archive" data-catalog-page>
               <div class="catalog-layout">
                 <aside class="catalog-sidebar" aria-label="Категории продукции">
-                  <nav class="catalog-sidebar__panel">
+                  <nav class="catalog-sidebar__panel catalog-accordion" aria-label="Категории каталога">
                     <p class="catalog-sidebar__label">Категории</p>
-                    <div class="catalog-sidebar__nav">
-                      <a class="catalog-sidebar__link is-active" href="products.html" aria-current="page">
-                        <strong>Буровое оборудование</strong>
-                        <span>18 позиций</span>
-                      </a>
-                      <ul class="catalog-sidebar__sublist">
-                        <li><a class="is-current" href="products.html">Буровые станки</a></li>
-                        <li><a href="products.html">Мачты и каретки</a></li>
-                        <li><a href="products.html">Ходовая часть</a></li>
-                        <li><a href="products.html">Запасные части</a></li>
-                      </ul>
 
-                      <a class="catalog-sidebar__link" href="products.html">
-                        <strong>Шахтный транспорт</strong>
-                        <span>12 позиций</span>
-                      </a>
-                      <a class="catalog-sidebar__link" href="products.html">
-                        <strong>Обогатительное оборудование</strong>
-                        <span>15 позиций</span>
-                      </a>
-                      <a class="catalog-sidebar__link" href="products.html">
-                        <strong>Оборудование подъема</strong>
-                        <span>9 позиций</span>
-                      </a>
-                      <a class="catalog-sidebar__link" href="products.html">
-                        <strong>Оборудование очистных забоев</strong>
-                        <span>11 позиций</span>
-                      </a>
-                      <a class="catalog-sidebar__link" href="products.html">
-                        <strong>Комплектующие и ЗИП</strong>
-                        <span>24 позиции</span>
-                      </a>
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-electro">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Электротехническое оборудование</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link is-current" type="button" data-category-link data-category-target="category-electro">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-electro" data-group-target="category-electro-switchboards">Щитовое оборудование</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-electro" data-group-target="category-electro-automation">Низковольтная аппаратура</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-climate">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Климатическая техника</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-climate">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-climate" data-group-target="category-climate-conditioning">Кондиционирование</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-climate" data-group-target="category-climate-ventilation">Вентиляция</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-garage">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Гаражное оборудование</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-garage">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-garage" data-group-target="category-garage-lifts">Подъемное оборудование</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-garage" data-group-target="category-garage-compressors">Компрессоры</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-tara">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Тара</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tara">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tara" data-group-target="category-tara-metal">Металлическая тара</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tara" data-group-target="category-tara-plastic">Пластиковая тара</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-valves">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Запорная и регулирующая арматура</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-valves">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-valves" data-group-target="category-valves-ball">Шаровые краны</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-valves" data-group-target="category-valves-control">Регулирующая арматура</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-tools">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Инструмент и строительное оборудование</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tools">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tools" data-group-target="category-tools-power">Электроинструмент</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-tools" data-group-target="category-tools-construction">Строительное оборудование</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-computers">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Компьютерная техника</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-computers">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-computers" data-group-target="category-computers-workstations">Рабочие станции</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-computers" data-group-target="category-computers-network">Сетевое оборудование</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-fasteners">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Метизы и крепеж</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-fasteners">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-fasteners" data-group-target="category-fasteners-bolts">Болты и гайки</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-fasteners" data-group-target="category-fasteners-anchors">Анкерный крепеж</button>
+                      </div>
+                    </div>
+
+                    <div class="catalog-accordion__item" data-catalog-item data-category="category-chem">
+                      <button class="catalog-accordion__trigger" type="button" data-category-trigger aria-expanded="false">
+                        <span>Масла, промышленная химия</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <div class="catalog-accordion__panel">
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-chem">Все товары</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-chem" data-group-target="category-chem-oils">Индустриальные масла</button>
+                        <button class="catalog-accordion__link" type="button" data-category-link data-category-target="category-chem" data-group-target="category-chem-cleaners">Техническая химия</button>
+                      </div>
                     </div>
                   </nav>
                 </aside>
 
-                <div class="catalog-content">
-                  <section class="catalog-head" aria-labelledby="catalog-title">
-                    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-                      <a href="index.html">Главная</a>
-                      <span>»</span>
-                      <a href="products.html">Продукция</a>
-                      <span>»</span>
-                      <span>Буровое оборудование</span>
-                    </nav>
-
-                    <div class="catalog-head__row">
-                      <div class="catalog-head__copy">
-                        <p class="catalog-head__label">Активная категория</p>
-                        <h2 id="catalog-title">Буровое оборудование</h2>
-                        <p class="catalog-head__text">
-                          Самоходные буровые станки, мачты, каретки, ходовая часть и запасные
-                          части для открытых горных работ. В разделе собраны позиции для
-                          первичной комплектации, ремонта и сервисного сопровождения техники.
-                        </p>
+                <div class="catalog-content catalog-content--archive">
+                  <section class="catalog-category-panel is-active" id="category-electro" data-category-panel="category-electro">
+                    <section class="catalog-head" aria-labelledby="catalog-title-electro">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Электротехническое оборудование</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-electro">Электротехническое оборудование</h2>
+                          <p class="catalog-head__text">
+                            Категория собрана как архив WooCommerce product category: внутри можно
+                            хранить подкатегории, карточки товаров и статические SEO-тексты до
+                            подключения динамического каталога.
+                          </p>
+                        </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                      <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
+                    </section>
+
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-electro-switchboards">
+                        <div class="catalog-panel-group__head">
+                          <h3>Щитовое оборудование</h3>
+                          <p>Шкафы, щиты и корпуса для распределения и защиты.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-electro.svg" alt="Щит распределительный ЩРН-36">
+                              </span>
+                              <span class="catalog-product__taxonomy">Щитовое оборудование</span>
+                              <h4 class="woocommerce-loop-product__title">Щит распределительный ЩРН-36</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+
+                      <section class="catalog-panel-group" id="category-electro-automation">
+                        <div class="catalog-panel-group__head">
+                          <h3>Низковольтная аппаратура</h3>
+                          <p>Автоматика и коммутационные устройства для силовых цепей.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-electro.svg" alt="Автоматический выключатель 3P 250A">
+                              </span>
+                              <span class="catalog-product__taxonomy">Низковольтная аппаратура</span>
+                              <h4 class="woocommerce-loop-product__title">Автоматический выключатель 3P 250A</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
                     </div>
                   </section>
 
-                  <section class="catalog-product-grid" aria-label="Список товаров">
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">Хит поставок</span>
-                        <div class="catalog-card__visual catalog-card__visual--rig" aria-hidden="true">
-                          <span class="catalog-card__visual-title">СБШ-250-40ДГ «Универсал»</span>
+                  <section class="catalog-category-panel" id="category-climate" data-category-panel="category-climate">
+                    <section class="catalog-head" aria-labelledby="catalog-title-climate">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Климатическая техника</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-climate">Климатическая техника</h2>
+                          <p class="catalog-head__text">
+                            Оборудование для кондиционирования, вентиляции и поддержания нужного
+                            режима работы на производственных, складских и административных объектах.
+                          </p>
                         </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Буровые станки</p>
-                        <h3 class="catalog-card__title">Дизель-гидравлический буровой станок СБШ-250-40ДГ</h3>
-                        <p class="catalog-card__summary">
-                          Самоходный станок вращательного бурения для бурения взрывных скважин
-                          на карьерах и промышленных площадках.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Диаметр бурения: 215-250 мм</li>
-                          <li>Глубина бурения: до 48 м</li>
-                          <li>Дизельный привод и автономная работа</li>
-                        </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. BO-250-40DG</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
-                        </div>
-                      </div>
-                    </a>
+                    </section>
 
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">Под заказ</span>
-                        <div class="catalog-card__visual catalog-card__visual--mast" aria-hidden="true">
-                          <span class="catalog-card__visual-title">Мачта буровая в сборе</span>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-climate-conditioning">
+                        <div class="catalog-panel-group__head">
+                          <h3>Кондиционирование</h3>
+                          <p>Сплит-системы, кассетные и канальные решения.</p>
                         </div>
-                      </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Мачты и каретки</p>
-                        <h3 class="catalog-card__title">Мачта буровая для станков серии СБШ</h3>
-                        <p class="catalog-card__summary">
-                          Усиленная конструкция для замены или комплектации буровых машин при
-                          капитальном ремонте и модернизации.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Поставка в сборе с направляющими</li>
-                          <li>Совместимость с серией СБШ</li>
-                          <li>Подбор под техническое задание</li>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-climate.svg" alt="Промышленный кондиционер кассетный 24 кВт">
+                              </span>
+                              <span class="catalog-product__taxonomy">Кондиционирование</span>
+                              <h4 class="woocommerce-loop-product__title">Промышленный кондиционер кассетный 24 кВт</h4>
+                            </a>
+                          </li>
                         </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. MT-210-SB</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
-                        </div>
-                      </div>
-                    </a>
+                      </section>
 
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">В наличии</span>
-                        <div class="catalog-card__visual catalog-card__visual--truck" aria-hidden="true">
-                          <span class="catalog-card__visual-title">Гусеничный ход</span>
+                      <section class="catalog-panel-group" id="category-climate-ventilation">
+                        <div class="catalog-panel-group__head">
+                          <h3>Вентиляция</h3>
+                          <p>Канальные системы и вентиляционные узлы для промышленных объектов.</p>
                         </div>
-                      </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Ходовая часть</p>
-                        <h3 class="catalog-card__title">Гусеничный ход полужесткого типа</h3>
-                        <p class="catalog-card__summary">
-                          Узел для ремонта и восстановления буровых станков с высокой нагрузкой
-                          на ходовую часть при карьерных работах.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Ресурс для интенсивной эксплуатации</li>
-                          <li>Поставка комплектом или поузлово</li>
-                          <li>Подбор по модели станка</li>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-climate.svg" alt="Вентилятор канальный круглый 315 мм">
+                              </span>
+                              <span class="catalog-product__taxonomy">Вентиляция</span>
+                              <h4 class="woocommerce-loop-product__title">Вентилятор канальный круглый 315 мм</h4>
+                            </a>
+                          </li>
                         </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. GH-540-M</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
-                        </div>
-                      </div>
-                    </a>
+                      </section>
+                    </div>
+                  </section>
 
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">Комплект ЗИП</span>
-                        <div class="catalog-card__visual catalog-card__visual--spares" aria-hidden="true">
-                          <span class="catalog-card__visual-title">Узлы вращателя</span>
+                  <section class="catalog-category-panel" id="category-garage" data-category-panel="category-garage">
+                    <section class="catalog-head" aria-labelledby="catalog-title-garage">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Гаражное оборудование</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-garage">Гаражное оборудование</h2>
+                          <p class="catalog-head__text">
+                            Оснащение ремонтных постов, боксов и транспортных участков с опорой
+                            на статичный product loop, который потом можно заменить данными WooCommerce.
+                          </p>
                         </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Запасные части</p>
-                        <h3 class="catalog-card__title">Комплект запасных частей на буровой станок</h3>
-                        <p class="catalog-card__summary">
-                          Поставка расходников, узлов вращателя, переходников и сервисных
-                          комплектов под конкретную модель оборудования.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Подбор по серийному номеру</li>
-                          <li>Согласование состава поставки</li>
-                          <li>Документация и упаковочный лист</li>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-garage-lifts">
+                        <div class="catalog-panel-group__head">
+                          <h3>Подъемное оборудование</h3>
+                          <p>Подъемники и оборудование для сервисных зон.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-garage.svg" alt="Двухстоечный подъемник 4 т">
+                              </span>
+                              <span class="catalog-product__taxonomy">Подъемное оборудование</span>
+                              <h4 class="woocommerce-loop-product__title">Двухстоечный подъемник 4 т</h4>
+                            </a>
+                          </li>
                         </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. ZIP-870-K</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
+                      </section>
+                      <section class="catalog-panel-group" id="category-garage-compressors">
+                        <div class="catalog-panel-group__head">
+                          <h3>Компрессоры</h3>
+                          <p>Компрессорные станции и пневматическое оснащение.</p>
                         </div>
-                      </div>
-                    </a>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-garage.svg" alt="Поршневой компрессор 500 л">
+                              </span>
+                              <span class="catalog-product__taxonomy">Компрессоры</span>
+                              <h4 class="woocommerce-loop-product__title">Поршневой компрессор 500 л</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
 
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">Новая серия</span>
-                        <div class="catalog-card__visual catalog-card__visual--rig" aria-hidden="true">
-                          <span class="catalog-card__visual-title">СБШ-160/200</span>
+                  <section class="catalog-category-panel" id="category-tara" data-category-panel="category-tara">
+                    <section class="catalog-head" aria-labelledby="catalog-title-tara">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Тара</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-tara">Тара</h2>
+                          <p class="catalog-head__text">
+                            Каталог тарных решений для склада, логистики и производственных участков,
+                            разбитый на подкатегории и карточки товара под будущую синхронизацию с CMS.
+                          </p>
                         </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Буровые станки</p>
-                        <h3 class="catalog-card__title">Самоходный буровой станок СБШ-160/200</h3>
-                        <p class="catalog-card__summary">
-                          Решение для бурения скважин меньшего диаметра на участках, где важны
-                          маневренность, автономность и быстрый запуск.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Для бурения на горных породах разной крепости</li>
-                          <li>Комплектация под проект заказчика</li>
-                          <li>Поставка с сервисной документацией</li>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-tara-metal">
+                        <div class="catalog-panel-group__head">
+                          <h3>Металлическая тара</h3>
+                          <p>Контейнеры и паллетные решения для тяжелых условий эксплуатации.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-tara.svg" alt="Контейнер металлический сетчатый 1200х1000">
+                              </span>
+                              <span class="catalog-product__taxonomy">Металлическая тара</span>
+                              <h4 class="woocommerce-loop-product__title">Контейнер металлический сетчатый 1200х1000</h4>
+                            </a>
+                          </li>
                         </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. BO-160-200</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
+                      </section>
+                      <section class="catalog-panel-group" id="category-tara-plastic">
+                        <div class="catalog-panel-group__head">
+                          <h3>Пластиковая тара</h3>
+                          <p>Евроконтейнеры и штабелируемые ящики для склада.</p>
                         </div>
-                      </div>
-                    </a>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-tara.svg" alt="Евроконтейнер пластиковый 600х400">
+                              </span>
+                              <span class="catalog-product__taxonomy">Пластиковая тара</span>
+                              <h4 class="woocommerce-loop-product__title">Евроконтейнер пластиковый 600х400</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
 
-                    <a class="catalog-card" href="product.html">
-                      <div class="catalog-card__media">
-                        <span class="catalog-card__badge">Сервисная поставка</span>
-                        <div class="catalog-card__visual catalog-card__visual--mast" aria-hidden="true">
-                          <span class="catalog-card__visual-title">Каретка вращателя</span>
+                  <section class="catalog-category-panel" id="category-valves" data-category-panel="category-valves">
+                    <section class="catalog-head" aria-labelledby="catalog-title-valves">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Запорная и регулирующая арматура</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-valves">Запорная и регулирующая арматура</h2>
+                          <p class="catalog-head__text">
+                            Архив товаров для трубопроводных и технологических систем с разбиением
+                            по типам арматуры и карточкам для product loop.
+                          </p>
                         </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                      <div class="catalog-card__body">
-                        <p class="catalog-card__category">Узлы и комплектующие</p>
-                        <h3 class="catalog-card__title">Каретка вращателя для буровых машин серии СБШ</h3>
-                        <p class="catalog-card__summary">
-                          Узел для планового ремонта и замены оборудования с учетом модели,
-                          комплектации и текущего состояния техники.
-                        </p>
-                        <ul class="catalog-card__specs">
-                          <li>Поставка в сборе или по составу</li>
-                          <li>Контроль совместимости по модели</li>
-                          <li>Сопровождение заявки до отгрузки</li>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-valves-ball">
+                        <div class="catalog-panel-group__head">
+                          <h3>Шаровые краны</h3>
+                          <p>Фланцевые и резьбовые решения для инженерных сетей.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-valves.svg" alt="Кран шаровой фланцевый DN50">
+                              </span>
+                              <span class="catalog-product__taxonomy">Шаровые краны</span>
+                              <h4 class="woocommerce-loop-product__title">Кран шаровой фланцевый DN50</h4>
+                            </a>
+                          </li>
                         </ul>
-                        <div class="catalog-card__footer">
-                          <span class="catalog-card__code">Арт. KR-320-R</span>
-                          <span class="catalog-card__link">Открыть карточку</span>
+                      </section>
+                      <section class="catalog-panel-group" id="category-valves-control">
+                        <div class="catalog-panel-group__head">
+                          <h3>Регулирующая арматура</h3>
+                          <p>Клапаны и элементы управления потоком среды.</p>
                         </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-valves.svg" alt="Клапан регулирующий DN25">
+                              </span>
+                              <span class="catalog-product__taxonomy">Регулирующая арматура</span>
+                              <h4 class="woocommerce-loop-product__title">Клапан регулирующий DN25</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
+
+                  <section class="catalog-category-panel" id="category-tools" data-category-panel="category-tools">
+                    <section class="catalog-head" aria-labelledby="catalog-title-tools">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Инструмент и строительное оборудование</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-tools">Инструмент и строительное оборудование</h2>
+                          <p class="catalog-head__text">
+                            Категория для строительно-монтажных работ, разделенная на базовые
+                            подкатегории с совместимой разметкой под product loop.
+                          </p>
+                        </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
                       </div>
-                    </a>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-tools-power">
+                        <div class="catalog-panel-group__head">
+                          <h3>Электроинструмент</h3>
+                          <p>Позиции для монтажных, ремонтных и сервисных работ.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-tools.svg" alt="Перфоратор SDS-max 1500 Вт">
+                              </span>
+                              <span class="catalog-product__taxonomy">Электроинструмент</span>
+                              <h4 class="woocommerce-loop-product__title">Перфоратор SDS-max 1500 Вт</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                      <section class="catalog-panel-group" id="category-tools-construction">
+                        <div class="catalog-panel-group__head">
+                          <h3>Строительное оборудование</h3>
+                          <p>Техника и узлы для бетонных, дорожных и монтажных работ.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-tools.svg" alt="Резчик швов бензиновый 14 дюймов">
+                              </span>
+                              <span class="catalog-product__taxonomy">Строительное оборудование</span>
+                              <h4 class="woocommerce-loop-product__title">Резчик швов бензиновый 14 дюймов</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
+
+                  <section class="catalog-category-panel" id="category-computers" data-category-panel="category-computers">
+                    <section class="catalog-head" aria-labelledby="catalog-title-computers">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Компьютерная техника</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-computers">Компьютерная техника</h2>
+                          <p class="catalog-head__text">
+                            Шаблон категории для рабочих станций, периферии и сетевых решений с
+                            карточками товара, которые затем можно связать с WooCommerce товарами.
+                          </p>
+                        </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
+                      </div>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-computers-workstations">
+                        <div class="catalog-panel-group__head">
+                          <h3>Рабочие станции</h3>
+                          <p>Компьютеры и мониторы для инженерных и офисных задач.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-computers.svg" alt="Рабочая станция инженерная Intel Core i7">
+                              </span>
+                              <span class="catalog-product__taxonomy">Рабочие станции</span>
+                              <h4 class="woocommerce-loop-product__title">Рабочая станция инженерная Intel Core i7</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                      <section class="catalog-panel-group" id="category-computers-network">
+                        <div class="catalog-panel-group__head">
+                          <h3>Сетевое оборудование</h3>
+                          <p>Коммутационные решения для локальных и производственных сетей.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-computers.svg" alt="Коммутатор управляемый 24 порта">
+                              </span>
+                              <span class="catalog-product__taxonomy">Сетевое оборудование</span>
+                              <h4 class="woocommerce-loop-product__title">Коммутатор управляемый 24 порта</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
+
+                  <section class="catalog-category-panel" id="category-fasteners" data-category-panel="category-fasteners">
+                    <section class="catalog-head" aria-labelledby="catalog-title-fasteners">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Метизы и крепеж</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-fasteners">Метизы и крепеж</h2>
+                          <p class="catalog-head__text">
+                            Категория крепежа и монтажных элементов, разложенная по подкатегориям
+                            для будущей синхронизации с архивом WooCommerce.
+                          </p>
+                        </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
+                      </div>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-fasteners-bolts">
+                        <div class="catalog-panel-group__head">
+                          <h3>Болты и гайки</h3>
+                          <p>Стандартный крепеж для сборочных и монтажных работ.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-fasteners.svg" alt="Болт оцинкованный М16х60">
+                              </span>
+                              <span class="catalog-product__taxonomy">Болты и гайки</span>
+                              <h4 class="woocommerce-loop-product__title">Болт оцинкованный М16х60</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                      <section class="catalog-panel-group" id="category-fasteners-anchors">
+                        <div class="catalog-panel-group__head">
+                          <h3>Анкерный крепеж</h3>
+                          <p>Анкеры и монтажные решения для несущих оснований.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-fasteners.svg" alt="Анкер клиновой 12х120">
+                              </span>
+                              <span class="catalog-product__taxonomy">Анкерный крепеж</span>
+                              <h4 class="woocommerce-loop-product__title">Анкер клиновой 12х120</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
+
+                  <section class="catalog-category-panel" id="category-chem" data-category-panel="category-chem">
+                    <section class="catalog-head" aria-labelledby="catalog-title-chem">
+                      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                        <a href="index.html">Главная</a>
+                        <span>»</span>
+                        <a href="products.html">Продукция</a>
+                        <span>»</span>
+                        <span>Масла, промышленная химия</span>
+                      </nav>
+                      <div class="catalog-head__row">
+                        <div class="catalog-head__copy">
+                          <p class="catalog-head__label">Категория каталога</p>
+                          <h2 id="catalog-title-chem">Масла, промышленная химия</h2>
+                          <p class="catalog-head__text">
+                            Категория расходных материалов и технической химии с разбивкой на
+                            подкатегории и товарные карточки под будущую интеграцию.
+                          </p>
+                        </div>
+                        <a class="catalog-head__cta" href="contacts.html">Запросить подбор</a>
+                      </div>
+                    </section>
+                    <div class="catalog-panel-groups">
+                      <section class="catalog-panel-group" id="category-chem-oils">
+                        <div class="catalog-panel-group__head">
+                          <h3>Индустриальные масла</h3>
+                          <p>Смазочные материалы для обслуживания техники и узлов.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-chem.svg" alt="Масло индустриальное И-40А">
+                              </span>
+                              <span class="catalog-product__taxonomy">Индустриальные масла</span>
+                              <h4 class="woocommerce-loop-product__title">Масло индустриальное И-40А</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                      <section class="catalog-panel-group" id="category-chem-cleaners">
+                        <div class="catalog-panel-group__head">
+                          <h3>Техническая химия</h3>
+                          <p>Очистители, составы и сервисная химия для эксплуатации.</p>
+                        </div>
+                        <ul class="catalog-products products columns-2" role="list">
+                          <li class="catalog-product product type-product">
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link" href="product.html">
+                              <span class="catalog-product__image-wrap">
+                                <img class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" src="images/thumb-chem.svg" alt="Очиститель тормозов промышленный 650 мл">
+                              </span>
+                              <span class="catalog-product__taxonomy">Техническая химия</span>
+                              <h4 class="woocommerce-loop-product__title">Очиститель тормозов промышленный 650 мл</h4>
+                            </a>
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
                   </section>
                 </div>
               </div>
@@ -307,18 +755,17 @@
             <div class="request-shell">
               <div class="request-copy">
                 <p class="request-kicker">Подбор по каталогу</p>
-                <h2>Заявка на оборудование</h2>
+                <h2>Заявка на товар или категорию</h2>
                 <p class="request-text">
-                  Отправьте запрос по нужной позиции или категории. Подберем оборудование,
-                  уточним комплектацию, срок поставки и подготовим коммерческое предложение.
+                  Отправьте ссылку на нужную категорию, подкатегорию или название товара.
+                  Подберем позицию, проверим наличие и подготовим коммерческое предложение.
                 </p>
                 <ul class="request-list">
-                  <li>Подбор по спецификации или маркировке</li>
-                  <li>Комплектация узлами, ЗИП и сопутствующими позициями</li>
-                  <li>Подготовка предложения под тендер или проект</li>
+                  <li>Подбор по спецификации, фото или маркировке</li>
+                  <li>Комплектация заявок по нескольким категориям</li>
+                  <li>Подготовка предложения под проект, тендер или сервис</li>
                 </ul>
               </div>
-
               <form class="request-form" method="post">
                 <label class="form-field">
                   <span class="field-label">Имя</span>
@@ -345,7 +792,6 @@
             для предприятий по всей России.
           </p>
         </div>
-
         <nav class="footer-nav" aria-label="Меню в подвале">
           <a href="index.html">Главная</a>
           <a href="products.html">Продукция</a>
@@ -353,7 +799,6 @@
           <a href="contacts.html">Контакты</a>
           <a href="projects.html">Проекты</a>
         </nav>
-
         <div class="footer-meta">
           <a href="tel:+73912887708">+7 (391) 288-77-08</a>
           <a href="mailto:snabcom124@mail.ru">snabcom124@mail.ru</a>
