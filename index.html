@@ -40,8 +40,8 @@
             <a class="active" href="index.html" aria-current="page">Главная</a>
             <a href="products.html">Продукция</a>
             <a href="about.html">О компании</a>
-            <a href="contacts.html">Контакты</a>
             <a href="projects.html">Проекты</a>
+            <a href="contacts.html">Контакты</a>
           </div>
           <div class="main-nav__contacts" aria-label="Контакты в меню">
             <a href="tel:+73912887708">+7 (391) 288-77-08</a>
@@ -131,7 +131,7 @@
               </div>
 
               <div class="about-grid">
-                <div>
+                <div class="about-copy">
                   <p class="section-lead">
                     ООО «Снабжающая Компания» обеспечивает предприятия электротехнической
                     продукцией и промышленным оборудованием по всей России.
@@ -145,6 +145,45 @@
                       Помогаем комплектовать заявки, сокращать сроки закупки и подбирать надежные
                       решения под реальные задачи заказчика.
                     </p>
+                  </div>
+
+                  <div class="certificates-showcase" aria-labelledby="certificates-title">
+                    <div class="certificates-showcase__head">
+                      <p class="certificates-showcase__kicker">Сертификаты</p>
+                      <h3 id="certificates-title">Подтвержденные документы и статус дилера</h3>
+                    </div>
+
+                    <div class="certificates-grid">
+                      <article class="certificate-card" data-certificate-item tabindex="0" role="button" aria-label="Открыть сертификат: Постановка на учет">
+                        <figure class="certificate-card__figure">
+                          <img class="certificate-card__image" src="images/Снимок экрана 2026-03-15 212347.png" alt="Свидетельство о постановке на учет ООО «Снабжающая Компания»" loading="lazy">
+                        </figure>
+                        <div class="certificate-card__caption">
+                          <strong>Постановка на учет</strong>
+                          <span>ФНС России</span>
+                        </div>
+                      </article>
+
+                      <article class="certificate-card" data-certificate-item tabindex="0" role="button" aria-label="Открыть сертификат: Дилер ООО «Восток»">
+                        <figure class="certificate-card__figure">
+                          <img class="certificate-card__image" src="images/Снимок экрана 2026-03-15 212432.png" alt="Свидетельство дилера ООО «Восток»" loading="lazy">
+                        </figure>
+                        <div class="certificate-card__caption">
+                          <strong>Дилер ООО «Восток»</strong>
+                          <span>Свидетельство дилера</span>
+                        </div>
+                      </article>
+
+                      <article class="certificate-card" data-certificate-item tabindex="0" role="button" aria-label="Открыть сертификат: Официальный дилер IEK">
+                        <figure class="certificate-card__figure">
+                          <img class="certificate-card__image" src="images/Diler_IEK.jpg" alt="Свидетельство официального дилера IEK" loading="lazy">
+                        </figure>
+                        <div class="certificate-card__caption">
+                          <strong>Официальный дилер IEK</strong>
+                          <span>Сертификат партнера</span>
+                        </div>
+                      </article>
+                    </div>
                   </div>
                 </div>
 
@@ -187,10 +226,7 @@
               <div class="category-grid">
                 <a class="category-card" href="products.html?category=category-electro">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <rect x="12" y="10" width="24" height="28" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      <path d="M24 16v6M21 24h6M24 24v8M18 32h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/electricity_renewable_energy_icon_220626.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Электротехническое оборудование</h3>
                   <p class="category-card__text">Кабель, автоматика, щитовое исполнение и комплектующие для промышленных объектов.</p>
@@ -198,11 +234,7 @@
 
                 <a class="category-card" href="products.html?category=category-climate">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <circle cx="24" cy="24" r="4" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      <path d="M24 10v6M24 32v6M14 18l5 3M29 27l5 3M14 30l5-3M29 21l5-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                      <path d="M12 24h4M32 24h4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/climate_change_management_weather_thermometer_ecology_icon_189080.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Климатическая техника</h3>
                   <p class="category-card__text">Вентиляция, кондиционирование и тепловое оборудование для цехов, складов и офисов.</p>
@@ -210,10 +242,7 @@
 
                 <a class="category-card" href="products.html?category=category-garage">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="M12 18h24l4 8v6H8v-6l4-8Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                      <path d="M17 18V12M31 18V12M16 32a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm16 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/garage_icon_124399.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Гаражное оборудование</h3>
                   <p class="category-card__text">Оснащение автосервисов, ремонтных зон и транспортных участков.</p>
@@ -221,10 +250,7 @@
 
                 <a class="category-card" href="products.html?category=category-tara">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="M12 16 24 10l12 6-12 6-12-6Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                      <path d="M12 16v16l12 6 12-6V16M24 22v16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/jerrycan_icon_153966.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Тара</h3>
                   <p class="category-card__text">Металлическая, пластиковая и складская тара для хранения и перемещения материалов.</p>
@@ -232,11 +258,7 @@
 
                 <a class="category-card" href="products.html?category=category-valves">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="M10 24h8m12 0h8M18 18v12M30 18v12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                      <circle cx="24" cy="24" r="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      <path d="M24 10v8M18 14h12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/tap_faucet_icon_181797.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Запорная и регулирующая арматура</h3>
                   <p class="category-card__text">Арматура и трубопроводные решения для инженерных и технологических систем.</p>
@@ -244,10 +266,7 @@
 
                 <a class="category-card" href="products.html?category=category-tools">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="m18 14 6 6-8 8-6-6 8-8Zm8 4 8 8m-4-12 4-4m-2 8 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M28 30 18 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/electronic_repair_service_tool_equipment_icon_193578.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Инструмент и строительное оборудование</h3>
                   <p class="category-card__text">Ручной инструмент, электрооборудование и техника для монтажа и стройки.</p>
@@ -255,10 +274,7 @@
 
                 <a class="category-card" href="products.html?category=category-computers">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <rect x="10" y="12" width="28" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      <path d="M18 36h12M24 30v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/desktop_102197.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Компьютерная техника</h3>
                   <p class="category-card__text">Рабочие станции, периферия и сетевое оборудование для офисной и производственной среды.</p>
@@ -266,10 +282,7 @@
 
                 <a class="category-card" href="products.html?category=category-fasteners">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="M18 14h12l4 4-10 10-8-8 2-6Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                      <path d="m24 28 10 10M20 18h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/3605318-bolt-bolts-construction-rivet-screw-screws_107870.svg');"></span>
                   </div>
                   <h3 class="category-card__title">Метизы и крепеж</h3>
                   <p class="category-card__text">Болты, гайки, анкеры и монтажный крепеж для строительства и сборки оборудования.</p>
@@ -277,10 +290,7 @@
 
                 <a class="category-card" href="products.html?category=category-chem">
                   <div class="category-card__media" aria-hidden="true">
-                    <svg viewBox="0 0 48 48">
-                      <path d="M20 12h8M22 12v8l-6 10a7 7 0 0 0 6 10h4a7 7 0 0 0 6-10l-6-10v-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M20 28h12M26 18c0 4 6 4 6 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-                    </svg>
+                    <span class="category-card__icon" style="--icon-mask: url('images/масло.png');"></span>
                   </div>
                   <h3 class="category-card__title">Масла, промышленная химия</h3>
                   <p class="category-card__text">Смазочные материалы, технические жидкости и химия для обслуживания техники.</p>
@@ -331,13 +341,13 @@
                   <div class="partner-logo__media">
                     <img class="partner-logo__image" src="images/NTG.png" alt="NTG" loading="lazy">
                   </div>
-                  <p class="partner-logo__caption">NTG</p>
+                  <p class="partner-logo__caption">Hорильсктрансгаз</p>
                 </article>
                 <article class="partner-logo">
                   <div class="partner-logo__media">
                     <img class="partner-logo__image" src="images/KRP.jpg" alt="KRP" loading="lazy">
                   </div>
-                  <p class="partner-logo__caption">KRP</p>
+                  <p class="partner-logo__caption">Красноярский речной порт</p>
                 </article>
               </div>
             </div>
@@ -449,8 +459,8 @@
           <a href="index.html">Главная</a>
           <a href="products.html">Продукция</a>
           <a href="about.html">О компании</a>
-          <a href="contacts.html">Контакты</a>
           <a href="projects.html">Проекты</a>
+          <a href="contacts.html">Контакты</a>
         </nav>
 
         <div class="footer-meta">

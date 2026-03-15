@@ -40,8 +40,8 @@
             <a href="index.html">Главная</a>
             <a href="products.html">Продукция</a>
             <a href="about.html">О компании</a>
-            <a href="contacts.html">Контакты</a>
             <a class="active" href="projects.html" aria-current="page">Проекты</a>
+            <a href="contacts.html">Контакты</a>
           </div>
           <div class="main-nav__contacts" aria-label="Контакты в меню">
             <a href="tel:+73912887708">+7 (391) 288-77-08</a>
@@ -64,8 +64,8 @@
               <p class="page-intro__kicker">Проекты</p>
               <h1 class="page-intro__title">Проекты, поставки и кейсы</h1>
               <p class="page-intro__text">
-                Страница оформлена как база под будущие кейсы: сюда можно добавлять фото,
-                краткое описание выполненной поставки, объект, категорию и результат по проекту.
+                Реализованные поставки и кейсы для промышленных предприятий, подрядчиков
+                и служб снабжения с кратким описанием задачи, состава поставки и результата.
               </p>
             </div>
           </div>
@@ -78,154 +78,281 @@
                 <h2>Кейсы поставок</h2>
               </div>
               <p class="section-lead">
-                Каждый кейс можно расширять: добавить фото объекта, подпись к изображению,
-                детали поставки и результат для заказчика без изменения общей структуры страницы.
+                Реальный пример поставки промышленного оборудования для крупного предприятия
+                Енисейского бассейна с акцентом на практический результат для заказчика.
               </p>
 
-              <div class="projects-grid">
-                <article class="project-case">
+              <div class="projects-grid projects-grid--cards">
+                <article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Место под фото щитовой, узла подключения или отгрузки на объект.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Электротехническое оборудование</span>
-                    <h3 class="project-case__title">Комплектация энергослужбы производственного участка</h3>
-                    <p class="project-case__text">Подобрали низковольтную аппаратуру, кабельную продукцию и комплектующие по спецификации заказчика с одной точкой координации по документам и срокам поставки.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
                       <span>Красноярск</span>
-                      <span>Поставка под проект</span>
-                      <span>Фото + описание</span>
+                      <span>Промышленная прачечная</span>
+                      
                     </div>
                   </div>
                 </article>
 
-                <article class="project-case">
+
+<article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Здесь можно показать установленное климатическое оборудование или процесс монтажа.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Климатическая техника</span>
-                    <h3 class="project-case__title">Поставка вентиляционного и климатического оборудования для складского комплекса</h3>
-                    <p class="project-case__text">Согласовали оборудование под режим эксплуатации, подобрали позиции по площади объекта и обеспечили поставку комплектом без дробления заявки на несколько поставщиков.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
-                      <span>СФО</span>
-                      <span>Инженерный объект</span>
-                      <span>Фото + подпись</span>
+                      <span>Красноярск</span>
+                      <span>Промышленная прачечная</span>
+                     
                     </div>
                   </div>
                 </article>
 
-                <article class="project-case">
+
+
+                <article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Подходит для фото ремонтной зоны, подъемников, компрессорного поста или готового участка.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Гаражное оборудование</span>
-                    <h3 class="project-case__title">Оснащение ремонтной зоны транспортного подразделения</h3>
-                    <p class="project-case__text">Собрали поставку гаражного оборудования для сервисного бокса: от базового оснащения до сопутствующих позиций, чтобы заказчик закрыл запуск участка одной закупкой.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
-                      <span>Транспортный участок</span>
-                      <span>Комплексная поставка</span>
-                      <span>Готово для кейса</span>
+                      <span>Красноярск</span>
+                      <span>Промышленная прачечная</span>
+                      
                     </div>
                   </div>
                 </article>
 
-                <article class="project-case">
+
+
+                <article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Можно показать складскую тару, комплект крепежа и фото зоны хранения после запуска.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Тара и крепеж</span>
-                    <h3 class="project-case__title">Комплектация складского участка тарой и метизами</h3>
-                    <p class="project-case__text">Подобрали складскую тару, крепеж и сопутствующие позиции для запуска участка хранения и внутрицеховой логистики с учетом условий эксплуатации и частоты использования.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
-                      <span>Производственный склад</span>
-                      <span>Логистика и хранение</span>
-                      <span>Фото + результат</span>
+                      <span>Красноярск</span>
+                      <span>Промышленная прачечная</span>
+                     
                     </div>
                   </div>
                 </article>
 
-                <article class="project-case">
+
+
+
+                <article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Подходит для снимка узла трубопровода, арматуры после монтажа или отгрузки на площадку.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Арматура</span>
-                    <h3 class="project-case__title">Поставка запорной и регулирующей арматуры для технологического узла</h3>
-                    <p class="project-case__text">Согласовали арматуру под параметры среды, обеспечили комплектность заявки и организовали поставку с понятной номенклатурой для монтажной и эксплуатационной команд.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
-                      <span>Промышленный объект</span>
-                      <span>Технологическая линия</span>
-                      <span>Фото + характеристика</span>
+                      <span>Красноярск</span>
+                      <span>Промышленная прачечная</span>
+                     
                     </div>
                   </div>
                 </article>
 
-                <article class="project-case">
+
+
+                <article class="project-case project-case--compact">
                   <div class="project-case__media-card">
-                    <div class="project-case__media" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <rect x="8" y="12" width="32" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="2.2" />
-                        <path d="m16 30 6-7 5 5 5-7 4 9H16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" />
-                        <circle cx="18" cy="20" r="2.5" fill="none" stroke="currentColor" stroke-width="2.2" />
-                      </svg>
-                      <span>Фото проекта</span>
+                    <figure class="project-case__media-figure">
+                      <img class="project-case__media-photo" src="images/JyX39i9_OMBUf4Fz5d88yN6ryYUAQLHWlBH09iwKOzY5Q_ZIXE08Wvv0yV4Zj6005ib5F3gfD0c8et2wmT5tcU0B.jpg" alt="Промышленная стирально-отжимная машина ВО-20" loading="lazy">
+                    </figure>
+
+                    <div class="project-case__client project-case__client--inline">
+                      <img class="project-case__client-logo" src="images/KRP.jpg" alt="АО Красноярский речной порт" loading="lazy">
+                      <div class="project-case__client-copy">
+                        <span class="project-case__client-label">Заказчик</span>
+                        <strong>АО «Красноярский речной порт»</strong>
+                      </div>
                     </div>
-                    <p class="project-case__media-note">Место под фото смешанной поставки: инструмент, рабочие места, расходные материалы и комплектующие.</p>
+
+                    <p class="project-case__media-note">
+                      Поставка промышленной стирально-отжимной машины ВО-20 для внутреннего
+                      обслуживания предприятия и обработки спецодежды персонала.
+                    </p>
                   </div>
                   <div class="project-case__content-card">
-                    <span class="project-case__tag">Смешанная заявка</span>
-                    <h3 class="project-case__title">Комплексная поставка для сервисной и инженерной команды</h3>
-                    <p class="project-case__text">Объединили инструмент, компьютерную технику и промышленную химию в один пакет поставки, чтобы заказчик получил согласованный комплект без разрыва по срокам и документам.</p>
+                    <span class="project-case__tag">Промышленное оборудование</span>
+                    <h3 class="project-case__title">Поставка промышленной стирально-отжимной машины ВО-20 для АО «Красноярский речной порт»</h3>
+                    <p class="project-case__text">
+                      Осуществлена поставка промышленной стирально-отжимной машины ВО-20
+                      для АО «Красноярский речной порт» — одного из крупнейших речных портов
+                      Восточной Сибири и крупнейшего грузоперерабатывающего предприятия
+                      Енисейского бассейна.
+                    </p>
+                    <p class="project-case__text">
+                      Оборудование предназначено для эффективной стирки и отжима спецодежды
+                      и текстильных изделий, используемых в производственной деятельности
+                      предприятия. Поставка позволила повысить эффективность внутреннего
+                      обслуживания и обеспечить качественную обработку рабочей одежды персонала.
+                    </p>
+
                     <div class="project-case__meta">
-                      <span>Многопозиционная заявка</span>
-                      <span>Сервисный запуск</span>
-                      <span>Фото + описание этапов</span>
+                      <span>Красноярск</span>
+                      <span>Промышленная прачечная</span>
+                      
                     </div>
                   </div>
                 </article>
+
+
+
               </div>
             </div>
           </div>
@@ -247,8 +374,8 @@
           <a href="index.html">Главная</a>
           <a href="products.html">Продукция</a>
           <a href="about.html">О компании</a>
-          <a href="contacts.html">Контакты</a>
           <a href="projects.html">Проекты</a>
+          <a href="contacts.html">Контакты</a>
         </nav>
 
         <div class="footer-meta">

@@ -489,6 +489,172 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const certificateGroups = Array.from(document.querySelectorAll(".certificates-grid"))
+    .map((grid) => Array.from(grid.querySelectorAll("[data-certificate-item]")))
+    .filter((items) => items.length);
+
+  if (certificateGroups.length) {
+    const lightbox = document.createElement("div");
+    lightbox.className = "certificate-lightbox";
+    lightbox.hidden = true;
+    lightbox.innerHTML = `
+      <div class="certificate-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр сертификата">
+        <button class="certificate-lightbox__close" type="button" data-certificate-close aria-label="Закрыть просмотр">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="certificate-lightbox__nav certificate-lightbox__nav--prev" type="button" data-certificate-prev aria-label="Предыдущий сертификат">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="certificate-lightbox__stage" data-certificate-stage>
+          <figure class="certificate-lightbox__figure">
+            <img class="certificate-lightbox__image" src="" alt="">
+            <figcaption class="certificate-lightbox__caption">
+              <strong class="certificate-lightbox__title"></strong>
+              <span class="certificate-lightbox__subtitle"></span>
+            </figcaption>
+          </figure>
+        </div>
+        <button class="certificate-lightbox__nav certificate-lightbox__nav--next" type="button" data-certificate-next aria-label="Следующий сертификат">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="certificate-lightbox__counter" data-certificate-counter></div>
+      </div>
+    `;
+
+    document.body.append(lightbox);
+
+    const dialog = lightbox.querySelector(".certificate-lightbox__dialog");
+    const stage = lightbox.querySelector("[data-certificate-stage]");
+    const previewImage = lightbox.querySelector(".certificate-lightbox__image");
+    const previewTitle = lightbox.querySelector(".certificate-lightbox__title");
+    const previewSubtitle = lightbox.querySelector(".certificate-lightbox__subtitle");
+    const previewCounter = lightbox.querySelector("[data-certificate-counter]");
+    const closeButton = lightbox.querySelector("[data-certificate-close]");
+    const prevButton = lightbox.querySelector("[data-certificate-prev]");
+    const nextButton = lightbox.querySelector("[data-certificate-next]");
+
+    let activeItems = [];
+    let activeIndex = 0;
+    let activeTrigger = null;
+
+    const syncLightbox = () => {
+      const item = activeItems[activeIndex];
+      const image = item?.querySelector(".certificate-card__image");
+      const title = item?.querySelector(".certificate-card__caption strong");
+      const subtitle = item?.querySelector(".certificate-card__caption span");
+
+      if (!image || !title || !subtitle) {
+        return;
+      }
+
+      previewImage.src = image.currentSrc || image.src;
+      previewImage.alt = image.alt || title.textContent || "";
+      previewTitle.textContent = title.textContent || "";
+      previewSubtitle.textContent = subtitle.textContent || "";
+      previewCounter.textContent = `${activeIndex + 1} / ${activeItems.length}`;
+
+      const hasMultipleItems = activeItems.length > 1;
+      prevButton.hidden = !hasMultipleItems;
+      nextButton.hidden = !hasMultipleItems;
+    };
+
+    const closeLightbox = () => {
+      if (lightbox.hidden) {
+        return;
+      }
+
+      lightbox.hidden = true;
+      document.body.classList.remove("gallery-open");
+      previewImage.removeAttribute("src");
+
+      if (activeTrigger) {
+        activeTrigger.focus();
+      }
+
+      activeTrigger = null;
+      activeItems = [];
+      activeIndex = 0;
+    };
+
+    const openLightbox = (items, index, trigger) => {
+      activeItems = items;
+      activeIndex = index;
+      activeTrigger = trigger;
+      syncLightbox();
+      lightbox.hidden = false;
+      document.body.classList.add("gallery-open");
+      closeButton?.focus();
+    };
+
+    const stepLightbox = (direction) => {
+      if (activeItems.length < 2) {
+        return;
+      }
+
+      activeIndex = (activeIndex + direction + activeItems.length) % activeItems.length;
+      syncLightbox();
+    };
+
+    certificateGroups.forEach((items) => {
+      items.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          openLightbox(items, index, item);
+        });
+
+        item.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") {
+            return;
+          }
+
+          event.preventDefault();
+          openLightbox(items, index, item);
+        });
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    prevButton.addEventListener("click", () => stepLightbox(-1));
+    nextButton.addEventListener("click", () => stepLightbox(1));
+
+    lightbox.addEventListener("click", (event) => {
+      if (
+        event.target === lightbox ||
+        event.target === dialog ||
+        event.target === stage
+      ) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (lightbox.hidden) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeLightbox();
+        return;
+      }
+
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        stepLightbox(-1);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        stepLightbox(1);
+      }
+    });
+  }
+
   document.querySelectorAll("[data-catalog-page]").forEach((catalog) => {
     const items = Array.from(catalog.querySelectorAll("[data-catalog-item]"));
     const triggers = Array.from(catalog.querySelectorAll("[data-category-trigger]"));
@@ -512,74 +678,34 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeGroup = null;
     let openCategory = null;
 
-    const setAccordionItemState = (item, isOpen, immediate = false) => {
-      const panel = item.querySelector(".catalog-accordion__panel");
-
-      if (!panel) {
-        return;
-      }
-
-      if (isOpen) {
-        item.classList.add("is-open");
-
-        if (immediate) {
-          panel.style.height = "auto";
-          return;
-        }
-
-        const startHeight = panel.offsetHeight;
-        panel.style.height = `${startHeight}px`;
-
-        requestAnimationFrame(() => {
-          panel.style.height = `${panel.scrollHeight}px`;
-        });
-
-        return;
-      }
-
-      const startHeight = item.classList.contains("is-open") ? panel.scrollHeight : panel.offsetHeight;
-
-      if (immediate) {
-        item.classList.remove("is-open");
-        panel.style.height = "0px";
-        return;
-      }
-
-      panel.style.height = `${startHeight}px`;
-
-      requestAnimationFrame(() => {
-        item.classList.remove("is-open");
-        panel.style.height = "0px";
-      });
-    };
-
-    const refreshAccordionHeights = () => {
-      items.forEach((item) => {
-        const panel = item.querySelector(".catalog-accordion__panel");
-
-        if (!panel) {
-          return;
-        }
-
-        panel.style.height = item.classList.contains("is-open") ? "auto" : "0px";
-      });
-    };
-
     items.forEach((item) => {
       const panel = item.querySelector(".catalog-accordion__panel");
 
+      if (!panel || panel.firstElementChild?.classList.contains("catalog-accordion__panel-inner")) {
+        return;
+      }
+
+      const inner = document.createElement("div");
+      inner.className = "catalog-accordion__panel-inner";
+
+      while (panel.firstChild) {
+        inner.append(panel.firstChild);
+      }
+
+      panel.append(inner);
+    });
+
+    const setAccordionItemState = (item, isOpen) => {
+      const panel = item.querySelector(".catalog-accordion__panel");
+
       if (!panel) {
         return;
       }
 
-      panel.addEventListener("transitionend", (event) => {
-        if (event.propertyName !== "height") {
-          return;
-        }
-
-        panel.style.height = item.classList.contains("is-open") ? "auto" : "0px";
-      });
-    });
+      item.classList.toggle("is-open", isOpen);
+      panel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      panel.inert = !isOpen;
+    };
 
     const syncCatalog = ({
       category = activeCategory,
@@ -618,7 +744,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isActive = item.dataset.category === activeCategory;
         const isOpen = item.dataset.category === openCategory;
         item.classList.toggle("is-active", isActive);
-        setAccordionItemState(item, isOpen, immediate);
+        setAccordionItemState(item, isOpen);
       });
 
       triggers.forEach((trigger) => {
@@ -676,8 +802,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     });
-
-    window.addEventListener("resize", refreshAccordionHeights);
 
     syncCatalog({ category: activeCategory, openCategoryTarget: openCategory, immediate: true });
   });
