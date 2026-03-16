@@ -489,6 +489,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const collapsibleProjectCards = Array.from(document.querySelectorAll(".project-case--collapsible"));
+
+  collapsibleProjectCards.forEach((card, index) => {
+    const contentCard = card.querySelector(".project-case__content-card");
+
+    if (!contentCard) {
+      return;
+    }
+
+    const syncExpandedState = () => {
+      const expanded = card.classList.contains("is-expanded");
+      card.setAttribute("aria-expanded", expanded ? "true" : "false");
+      contentCard.setAttribute("aria-hidden", expanded ? "false" : "true");
+    };
+
+    card.classList.add("is-collapsible-ready");
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+
+    if (!contentCard.id) {
+      contentCard.id = `project-case-content-${index + 1}`;
+    }
+
+    card.setAttribute("aria-controls", contentCard.id);
+    syncExpandedState();
+
+    const toggleCard = () => {
+      card.classList.toggle("is-expanded");
+      syncExpandedState();
+    };
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button")) {
+        return;
+      }
+
+      const selectedText = window.getSelection?.().toString().trim();
+
+      if (selectedText) {
+        return;
+      }
+
+      toggleCard();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+
+      event.preventDefault();
+      toggleCard();
+    });
+  });
+
   const certificateGroups = Array.from(document.querySelectorAll(".certificates-grid"))
     .map((grid) => Array.from(grid.querySelectorAll("[data-certificate-item]")))
     .filter((items) => items.length);
