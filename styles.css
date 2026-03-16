@@ -2933,7 +2933,7 @@ button {
 }
 
 .page-contacts .contacts-top {
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.67fr);
 }
 
 .page-contacts .contacts-form {
